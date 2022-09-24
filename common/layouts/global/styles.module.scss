@@ -1,0 +1,126 @@
+@use 'common/styles/vars' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.nav {
+  background: $primaryDark;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .siteName {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+      color: $primaryLight;
+      transition: 0.15s linear;
+    }
+
+    &:hover {
+      text-shadow: 0 0 3px currentColor;
+
+      span {
+        color: white;
+        text-shadow: 0 0 2px currentColor;
+      }
+    }
+  }
+
+  svg {
+    color: white;
+  }
+
+  nav {
+    color: white;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      svg {
+        margin-right: 0.35rem;
+      }
+
+      &:hover svg {
+        color: inherit;
+      }
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    nav a {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      svg {
+        margin-right: 0;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.header {
+  margin-bottom: 6rem;
+
+  h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: $secondaryText;
+    font-size: 1rem;
+    position: relative;
+
+    span {
+      background: $background;
+      z-index: 1;
+      position: relative;
+      padding: 0 1em;
+      display: inline-block;
+    }
+
+    hr {
+      position: absolute;
+      width: 100%;
+      bottom: 0.03em;
+      border: none;
+      border-bottom: 1px solid $secondaryText;
+    }
+  }
+}
+
+.content {
+  padding: 7rem 10%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer {
+  background: $primaryDark;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.2rem;
+}

@@ -1,0 +1,37 @@
+.imageContainer {
+  text-align: center;
+
+  p {
+    opacity: 0.7;
+  }
+}
+
+.ingredients {
+  li > div {
+    display: inline-flex;
+
+    span:first-child {
+      font-weight: 600;
+      width: 70px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  @media all and (max-width: 310px) {
+    li {
+      margin-bottom: 0.5rem;
+      & > div {
+        flex-direction: column;
+
+        span:first-child {
+          width: unset;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  margin-top: 3rem;
+}
