@@ -1,3 +1,22 @@
 @mixin glow($blur: 5px, $color: currentColor) {
   filter: drop-shadow(0px 0px $blur $color);
 }
+
+$shakeDegrees: 7;
+$shakeScaleUp: 1.05;
+$shakeScaleDown: 0.95;
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0), scale(0);
+  }
+  25% {
+    transform: rotate(#{$shakeDegrees}deg) scale(#{$shakeScaleUp});
+  }
+  50% {
+    transform: rotate(0) scale(#{$shakeScaleDown});
+  }
+  75% {
+    transform: rotate(-#{$shakeDegrees}deg) scale(#{$shakeScaleUp});
+  }
+}

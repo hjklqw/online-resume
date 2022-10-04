@@ -1,0 +1,32 @@
+@use 'assets/mixins' as *;
+
+.wrapper {
+  text-align: center;
+  cursor: pointer;
+
+  svg {
+    font-size: 10vw;
+    animation: 0.5s shake;
+  }
+
+  &:hover {
+    color: var(--error);
+    @include glow(10px);
+
+    svg {
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: none;
+    text-shadow: 0 0 1px currentColor;
+  }
+}

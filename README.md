@@ -8,9 +8,11 @@ View the site live [here](https://mp-online-resume-2022.vercel.app/)! Deployed o
 - Typescript
 - NextJS
 - SASS
+- Recoil
 
 ## Features
 
 - Fully responsive
 - Light CSS transitions
+- Menacing CSS animations
 - A delicious recipe
