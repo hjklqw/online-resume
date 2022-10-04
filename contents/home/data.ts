@@ -44,7 +44,6 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       ['Angular', 'Azure'],
       'Extensive full-stack, responsive, cross-browser and cross-platform development practise',
       'Speed and willingness to learn and apply new programming languages, styles, and concepts',
-      'Great lattes',
     ],
   },
   {

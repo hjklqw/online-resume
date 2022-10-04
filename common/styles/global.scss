@@ -1,6 +1,28 @@
-@use 'vars' as *;
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #7dab29;
+  --accent: #beff47;
+  --primaryDark: #545b4d;
+  --secondary: #ffc866;
+
+  --text: #171717;
+  --secondaryText: #94b656;
+  --background: #f8f7f4;
+  --backgroundBottom: white;
+}
+
+.theme-dark {
+  --primary: #9abc5a;
+  --accent: #ffac00;
+  --primaryDark: #4e5443;
+  --secondary: #9d8254;
+
+  --text: #f8f7f4;
+  --secondaryText: #c0d39f;
+  --background: #171717;
+  --backgroundBottom: #312e28;
+}
 
 html,
 body,
@@ -18,13 +40,6 @@ body,
   line-height: 1.5em;
   max-width: 100%;
   overflow-x: hidden;
-  color: $text;
-  background: linear-gradient(
-    180deg,
-    $background 0%,
-    $background 50%,
-    white 90%
-  );
 
   * {
     box-sizing: border-box;
@@ -44,7 +59,7 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
-  color: $primary;
+  color: var(--primary);
 }
 
 a,
@@ -55,7 +70,7 @@ a:visited {
   transition: 0.15s linear color;
 
   &:hover {
-    color: $secondary;
+    color: var(--secondary);
   }
 }
 
@@ -68,7 +83,7 @@ ul {
     display: inline-block;
     width: 1.5rem;
     margin-left: -1.5rem;
-    color: $secondary;
+    color: var(--secondary);
     vertical-align: text-bottom;
   }
 }
@@ -85,7 +100,7 @@ ol {
     &:before {
       content: counter(item);
       padding-right: 1.5rem;
-      color: $secondary;
+      color: var(--secondary);
       font-weight: 600;
     }
   }

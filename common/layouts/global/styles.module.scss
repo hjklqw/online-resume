@@ -1,13 +1,21 @@
-@use 'common/styles/vars' as *;
+@use 'assets/mixins' as *;
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
+  color: var(--text);
+  background: linear-gradient(
+    180deg,
+    var(--background) 0%,
+    var(--background) 50%,
+    var(--backgroundBottom) 90%
+  );
 }
 
 .nav {
-  background: $primaryDark;
+  background: var(--primaryDark);
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -19,16 +27,16 @@
     text-transform: uppercase;
 
     span {
-      color: $primaryLight;
+      color: var(--accent);
       transition: 0.15s linear;
     }
 
     &:hover {
-      text-shadow: 0 0 3px currentColor;
+      @include glow(2px, var(--secondary));
 
       span {
         color: white;
-        text-shadow: 0 0 2px currentColor;
+        @include glow;
       }
     }
   }
@@ -54,6 +62,15 @@
 
       &:hover svg {
         color: inherit;
+      }
+    }
+
+    & > svg {
+      cursor: pointer;
+      @include glow;
+
+      &:hover {
+        color: var(--secondary);
       }
     }
   }
@@ -88,12 +105,12 @@
 
   .subtitle {
     text-align: center;
-    color: $secondaryText;
+    color: var(--secondaryText);
     font-size: 1rem;
     position: relative;
 
     span {
-      background: $background;
+      background: var(--background);
       z-index: 1;
       position: relative;
       padding: 0 1em;
@@ -105,7 +122,7 @@
       width: 100%;
       bottom: 0.03em;
       border: none;
-      border-bottom: 1px solid $secondaryText;
+      border-bottom: 1px solid var(--secondaryText);
     }
   }
 }
@@ -118,7 +135,7 @@
 }
 
 .footer {
-  background: $primaryDark;
+  background: var(--primaryDark);
   color: white;
   font-size: 0.8rem;
   text-align: center;

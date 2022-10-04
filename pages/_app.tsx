@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import { RecoilRoot } from 'recoil'
 
 import 'common/styles/global.scss'
 
@@ -11,14 +12,16 @@ type Props<P = any> = AppProps<P> & {
 }
 
 const App = ({ Component, pageProps }: Props) => (
-  <GlobalLayout title={Component.title} subtitle={Component.subtitle}>
-    <Head
-      title={Component.title}
-      description={Component.description}
-      structuredData={Component.meta}
-    />
-    <Component {...pageProps} />
-  </GlobalLayout>
+  <RecoilRoot>
+    <GlobalLayout title={Component.title} subtitle={Component.subtitle}>
+      <Head
+        title={Component.title}
+        description={Component.description}
+        structuredData={Component.meta}
+      />
+      <Component {...pageProps} />
+    </GlobalLayout>
+  </RecoilRoot>
 )
 
 export default App

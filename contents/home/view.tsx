@@ -53,15 +53,15 @@ export const HomePage = () => (
         <div key={i} className={styles.skill}>
           <h3 className={styles.categoryText}>{skill.category}</h3>
           <ul>
-            {skill.points.map((p) =>
+            {skill.points.map((p, j) =>
               Array.isArray(p) ? (
-                <ul>
-                  {p.map((subpoint, j) => (
-                    <li key={j}>{subpoint}</li>
+                <ul key={j}>
+                  {p.map((subpoint, k) => (
+                    <li key={k}>{subpoint}</li>
                   ))}
                 </ul>
               ) : (
-                <li>{p}</li>
+                <li key={j}>{p}</li>
               )
             )}
           </ul>

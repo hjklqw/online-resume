@@ -1,7 +1,5 @@
-@use 'common/styles/vars' as *;
-
 $horizontalSectionCutoffScreenWidth: 830px;
-$hrBorder: 1px dashed $primary;
+$hrBorder: 1px dashed var(--primary);
 
 @mixin horizontalSection {
   margin-bottom: 1rem;
@@ -97,7 +95,7 @@ section.contactInfo {
   .categoryText {
     font-weight: 500;
     font-size: inherit;
-    color: $secondaryText;
+    color: var(--secondaryText);
     @include horizontalSectionLeftData;
   }
 }
