@@ -1,6 +1,12 @@
 import styles from './styles.module.scss'
 
-import { contactInfo, education, experience, skills } from './data'
+import {
+  contactInfo,
+  education,
+  experience,
+  miscExperience,
+  skills,
+} from './data'
 import { ExperienceInfo } from './experienceInfo'
 import { ExperienceInfoOrientation } from './models'
 
@@ -74,6 +80,19 @@ export const HomePage = () => (
     <section className={styles.info}>
       <h2>Experience</h2>
       {experience.map((exp, i) => (
+        <ExperienceInfo
+          model={exp}
+          orientation={ExperienceInfoOrientation.HORIZONTAL}
+          key={i}
+        />
+      ))}
+    </section>
+
+    <hr className={styles.separator} />
+
+    <section className={styles.info}>
+      <h2>Misc Experience</h2>
+      {miscExperience.map((exp, i) => (
         <ExperienceInfo
           model={exp}
           orientation={ExperienceInfoOrientation.HORIZONTAL}

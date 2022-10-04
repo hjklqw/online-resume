@@ -51,6 +51,8 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
     points: [
       'Guided colleagues on syntax and logic flow while collaboratively developing an application',
       'Explained advanced programmatic and design ideas to first year game development students as a teaching assistant, providing technical feedback on assignments',
+      'Used the following communication and task tracking technologies:',
+      ['Github', 'Jira', 'Slack', 'Microsoft Teams'],
     ],
   },
   {
@@ -98,6 +100,46 @@ export const experience: ExperienceModel[] = [
       'Created a WYSIWYG editor integrated with a large scale CMS to dynamically generate product pages from database records, minimizing manual work for product managers and removing it for developers',
       'Built the front page of the customer support site using custom jQuery widgets and REST API calls',
       'Developed internal-use XML conversion software in Java',
+    ],
+  },
+]
+
+export const miscExperience: ExperienceModel[] = [
+  {
+    title: 'Co-Op Full Stack Web Developer',
+    location: 'Bank Of Canada, Ottawa, ON',
+    dates: 'April 2014 – August 2014',
+    points: [
+      'Worked in a cross-functional Agile Scrum team to improve, bug fix, and add to the bank’s main and Museum PHP sites',
+      'Styled the majority of the Bank’s responsive Museum site based on supplied design files',
+      'Used BEHAT to create automated tests for UI and functionality',
+    ],
+  },
+  {
+    title: 'Co-Op Full Stack Web Developer',
+    location: 'BOLDstreet Wireless, Ottawa, ON',
+    dates: 'September 2013 – January 2014',
+    points: [
+      'Built a credit card and registration system on top of a base website with a partner to facilitate users in purchasing internet time with a user-friendly interface, learning how to work with the code of an established system and how to design and incorporate databases into relevant projects, practicing both front and back-end development',
+      'Finished building a site from scratch in two days based on given wireframes',
+    ],
+  },
+  {
+    title: 'User Application Support/Junior Programmer Analyst',
+    location: 'Department of Justice Canada, Ottawa ON',
+    dates: 'July 2013 – September 2013',
+    points: [
+      'Tested for and reported bugs, practising iterative error checking and gaining familiarity with common coding mistakes',
+      'Investigated causes and solutions of bugs found by others on a list of thrown exceptions, providing detailed fixes and/or bug reports, facilitating the development of software solutions',
+    ],
+  },
+  {
+    title: 'Teaching Assistant',
+    location: 'Carleton University, Ottawa ON',
+    dates: 'January 2013 – May 2013',
+    points: [
+      'Marked the assignments of first year game development students, giving detailed feedback concerning design and code concepts, both providing thorough support and gaining experience in doing so, along with learning from the diversity of their work',
+      'Communicated often with the professor to ensure that feedback delivery was well done and within the bounds of what he was looking for, gaining proficiency and understanding in methods of evaluating complex concepts',
     ],
   },
 ]
