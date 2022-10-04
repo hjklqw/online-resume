@@ -32,7 +32,8 @@
     }
 
     &:hover {
-      @include glow(2px, var(--secondary));
+      color: var(--navHover);
+      @include glow(2px);
 
       span {
         color: white;
@@ -60,8 +61,13 @@
         margin-right: 0.35rem;
       }
 
-      &:hover svg {
-        color: inherit;
+      &:hover {
+        color: var(--navHover);
+        letter-spacing: 0.1rem;
+
+        svg {
+          color: inherit;
+        }
       }
     }
 
@@ -70,7 +76,7 @@
       @include glow;
 
       &:hover {
-        color: var(--secondary);
+        color: var(--navHover);
       }
     }
   }
