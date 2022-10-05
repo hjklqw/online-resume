@@ -68,7 +68,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
 
 export const experience: ExperienceModel[] = [
   {
-    title: 'Front-End Developer',
+    title: 'Senior Front-End Developer',
     location: 'EInc., Remote',
     dates: 'November 2021 - Present',
     points: [
