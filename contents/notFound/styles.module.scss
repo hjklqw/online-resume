@@ -3,6 +3,8 @@
 .wrapper {
   text-align: center;
   cursor: pointer;
+  position: absolute;
+  inset: 0;
 
   svg {
     font-size: clamp(10vw, 500px, 70vw);
@@ -28,5 +30,21 @@
     font-weight: 700;
     display: none;
     text-shadow: 0 0 1px currentColor;
+    margin: 0;
+    margin-top: -1.5rem;
+  }
+
+  @media all and (max-height: 930px) {
+    svg {
+      max-height: 39vh;
+    }
+  }
+
+  @media all and (max-height: 670px) {
+    top: -42%;
+
+    svg {
+      max-height: 39vh;
+    }
   }
 }
