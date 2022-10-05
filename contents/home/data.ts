@@ -40,7 +40,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
         'Backend technologies (Node.js Express, C# .Net Core)',
         'Databases (MongoDB, CosmosDB, Apollo GraphQL)',
         'Testing (Cypress, Jest, Storybook)',
-        'DevOps (Github, Jira)',
+        'DevOps (Github, Jira, Azure DevOps)',
       ],
       'Experience with:',
       ['Angular', 'Azure'],
