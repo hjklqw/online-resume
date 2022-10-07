@@ -90,6 +90,106 @@
   }
 }
 
+.nav {
+  $borderSize: 1px;
+
+  position: absolute;
+  height: calc(100% - 25vw);
+  top: 23rem;
+  right: 10%;
+  border-right: $borderSize solid var(--text);
+
+  .dot {
+    cursor: pointer;
+    $diameter: 0.8rem;
+    width: $diameter;
+    height: $diameter;
+    color: var(--text);
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: calc(-#{$diameter / 2} + #{$borderSize});
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: var(--secondary);
+      scale: 1.5;
+    }
+
+    &.active {
+      scale: 1.5;
+
+      &::after {
+        content: '';
+        width: 130%;
+        height: 130%;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        left: -23%;
+        top: -23%;
+        transition: all 0.05s linear;
+      }
+    }
+
+    .label {
+      margin-top: -0.35em;
+      margin-left: 1.5em;
+      display: block;
+      transition: all 0.05s linear;
+
+      @media all and (max-width: 1500px) {
+        margin-left: calc(-400% - 2rem);
+      }
+    }
+  }
+}
+
+section.highlights {
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  .highlight {
+    background: var(--cardBackground);
+    color: var(--cardText);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 0.5rem solid var(--primary);
+
+    svg {
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      opacity: 0.2;
+      color: var(--cardPrimary);
+      font-size: 20rem;
+      transform: rotate(-30deg);
+    }
+
+    span {
+      display: block;
+
+      &.hook {
+        font-size: 3rem;
+        line-height: 1em;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+    }
+
+    &:nth-child(2) svg {
+      color: var(--cardAccent);
+    }
+  }
+
+  @media all and (max-width: 1050px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 $rippleDiameterStart: 1rem;
 $rippleDiameterEnd: 20rem;
 $rippleCenterPoint: ($rippleDiameterStart - $rippleDiameterEnd) / 2;

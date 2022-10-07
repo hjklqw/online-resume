@@ -13,6 +13,11 @@
   --backgroundBottom: white;
   --navHover: var(--secondary);
   --error: #e02b26;
+
+  --cardBackground: #f0ede6;
+  --cardText: #413722;
+  --cardPrimary: #72894a;
+  --cardAccent: #ffab00;
 }
 
 .theme-dark {
@@ -26,6 +31,11 @@
   --background: #171717;
   --backgroundBottom: #312e28;
   --navHover: #ffc866;
+
+  --cardBackground: var(--text);
+  --cardText: var(--background);
+  --cardPrimary: var(--primary);
+  --cardAccent: var(--accent);
 }
 
 html,
