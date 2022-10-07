@@ -10,7 +10,7 @@ import {
 import { ExperienceInfo } from './experienceInfo'
 import { ExperienceInfoOrientation } from './models'
 
-export const HomePage = () => (
+export const ResumePage = () => (
   <>
     <div className={styles.row}>
       <section className={`${styles.info} ${styles.contactInfo}`}>

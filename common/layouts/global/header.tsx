@@ -1,10 +1,12 @@
 import Link from 'next/link'
-import { SetterOrUpdater } from 'recoil'
 import React, { useCallback, useEffect, useState } from 'react'
+import { SetterOrUpdater } from 'recoil'
+import { IconType } from 'react-icons'
 
-import { MdLocalDrink } from 'react-icons/md'
-import { HiDocumentText } from 'react-icons/hi'
 import { RiLightbulbFlashLine, RiLightbulbLine } from 'react-icons/ri'
+import { IoIosHome } from 'react-icons/io'
+import { GiHeartDrop } from 'react-icons/gi'
+import { TbClipboardText } from 'react-icons/tb'
 
 import styles from './styles.module.scss'
 
@@ -20,9 +22,31 @@ type Props = {
 /** The amount of time this should take to fade away, in miliseconds */
 const FADE_TIME = 350
 
+const navItems: {
+  [key in Routes]: { icon: IconType; label: string; alt: string }
+} = {
+  [Routes.LANDING]: {
+    icon: IoIosHome,
+    label: 'Home',
+    alt: 'Overview',
+  },
+  [Routes.RESUME]: {
+    icon: TbClipboardText,
+    label: 'Resume',
+    alt: 'Resume',
+  },
+  [Routes.DELICIOUSNESS]: {
+    icon: GiHeartDrop,
+    label: 'Deliciousness',
+    alt: 'A recipe',
+  },
+}
+
 export const Header = ({ theme, setTheme }: Props) => {
   const [isSticky, setSticky] = useState<boolean>(false)
   const [isFading, setFading] = useState<boolean>(false)
+
+  const isDefaultTheme = theme === Theme.DEFAULT
 
   const onScroll = useCallback(
     (e: Event) => {
@@ -55,35 +79,27 @@ export const Header = ({ theme, setTheme }: Props) => {
 
   return (
     <section className={className}>
-      <Link href={Routes.HOME}>
+      <Link href={Routes.RESUME}>
         <a className={styles.siteName} title="Home">
           The <span>O</span>nline Resume
         </a>
       </Link>
       <nav>
-        <Link href={Routes.HOME} title="Home">
-          <a>
-            <HiDocumentText />
-            <span>Resume</span>
-          </a>
-        </Link>
-        <Link href={Routes.DELICIOUSNESS} title="A recipe">
-          <a>
-            <MdLocalDrink />
-            <span>Deliciousness</span>
-          </a>
-        </Link>
-        {theme === Theme.DEFAULT ? (
-          <RiLightbulbFlashLine
-            onClick={() => setTheme(Theme.DARK)}
-            title="Turn off"
-          />
-        ) : (
-          <RiLightbulbLine
-            onClick={() => setTheme(Theme.DEFAULT)}
-            title="Turn on"
-          />
-        )}
+        {Object.entries(navItems).map(([route, data]) => (
+          <Link href={route} title={data.alt} key={route}>
+            <a>
+              <data.icon />
+              <span>{data.label}</span>
+            </a>
+          </Link>
+        ))}
+        <button
+          className={styles.themeButton}
+          onClick={() => setTheme(isDefaultTheme ? Theme.DARK : Theme.DEFAULT)}
+          title={isDefaultTheme ? 'Turn off' : 'Turn on'}
+        >
+          {isDefaultTheme ? <RiLightbulbFlashLine /> : <RiLightbulbLine />}
+        </button>
       </nav>
     </section>
   )

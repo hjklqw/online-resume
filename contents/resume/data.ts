@@ -34,7 +34,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       'Proficiency with:',
       [
         'Javascript (React, Typescript, ES6+)',
-        'React state management libraries (Redux, Recoil)',
+        'React frameworks (Next.js, Redux, Recoil, React Router)',
         'HTML5',
         'CSS3 (SASS, styled-components)',
         'Backend technologies (Node.js Express, C# .Net Core)',

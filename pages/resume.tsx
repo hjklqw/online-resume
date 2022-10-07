@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
 
 import { PageModel } from '/common/models/page'
-import { LandingPage } from '/contents/landing'
+import { ResumePage } from '/contents/resume'
 
-const Landing: NextPage = () => <LandingPage />
+const Resume: NextPage = () => <ResumePage />
 
-const page = Landing as PageModel<{}>
+const page = Resume as PageModel<{}>
 page.title = 'Michelle Poon'
-page.subtitle = 'Portfolio'
+page.subtitle = 'Resume'
 page.description = 'Online resume'
 page.meta = {
   '@type': 'CreativeWork',
-  name: 'Portfolio',
+  name: 'Online Resume',
   url: process.env.NEXT_PUBLIC_URL,
   email: 'mp.hjkqw@gmail.com',
 }
 
-export default Landing
+export default Resume
