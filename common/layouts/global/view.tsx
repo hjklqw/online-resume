@@ -5,12 +5,11 @@ import { useMountedRecoilState } from '/utils/recoil/useMountedRecoilState'
 import { Header } from './header'
 
 type Props = {
-  title: string
-  subtitle: string
-  children: React.ReactNode
+  mainContents: React.ReactNode
+  subLayout?: React.ReactNode
 }
 
-export const GlobalLayout = ({ title, subtitle, children }: Props) => {
+export const GlobalLayout = ({ mainContents, subLayout }: Props) => {
   const [theme, setTheme] = useMountedRecoilState(themeAtom)
 
   return (
@@ -18,14 +17,8 @@ export const GlobalLayout = ({ title, subtitle, children }: Props) => {
       <Header theme={theme} setTheme={setTheme} />
 
       <section className={styles.content}>
-        <header className={styles.header}>
-          <h1>{title}</h1>
-          <div className={styles.subtitle}>
-            <span>{subtitle}</span>
-            <hr />
-          </div>
-        </header>
-        <main>{children}</main>
+        {subLayout}
+        <main>{mainContents}</main>
       </section>
 
       <footer className={styles.footer}>&copy; Michelle Poon, 2022</footer>

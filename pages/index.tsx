@@ -15,5 +15,6 @@ page.meta = {
   url: process.env.NEXT_PUBLIC_URL,
   email: 'mp.hjkqw@gmail.com',
 }
+page.usePageLayout = false
 
 export default Landing

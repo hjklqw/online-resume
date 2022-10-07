@@ -5,4 +5,6 @@ export type PageModel<P> = NextComponentType<NextPageContext, any, P> & {
   subtitle: string
   description?: string
   meta?: Record<string, any>
+  /** True by default */
+  usePageLayout?: boolean
 }

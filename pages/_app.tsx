@@ -6,6 +6,7 @@ import 'common/styles/global.scss'
 import { GlobalLayout } from '/common/layouts/global'
 import { Head } from '/common/head'
 import { PageModel } from '/common/models/page'
+import { PageLayout } from '/common/layouts/page'
 
 type Props<P = any> = AppProps<P> & {
   Component: PageModel<P>
@@ -13,14 +14,19 @@ type Props<P = any> = AppProps<P> & {
 
 const App = ({ Component, pageProps }: Props) => (
   <RecoilRoot>
-    <GlobalLayout title={Component.title} subtitle={Component.subtitle}>
-      <Head
-        title={Component.title}
-        description={Component.description}
-        structuredData={Component.meta}
-      />
-      <Component {...pageProps} />
-    </GlobalLayout>
+    <Head
+      title={Component.title}
+      description={Component.description}
+      structuredData={Component.meta}
+    />
+    <GlobalLayout
+      subLayout={
+        Component.usePageLayout !== false ? (
+          <PageLayout title={Component.title} subtitle={Component.subtitle} />
+        ) : undefined
+      }
+      mainContents={<Component {...pageProps} />}
+    />
   </RecoilRoot>
 )
 

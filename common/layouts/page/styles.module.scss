@@ -1,0 +1,35 @@
+.header {
+  margin-bottom: 6rem;
+
+  h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: var(--secondaryText);
+    font-size: 1rem;
+    position: relative;
+
+    span {
+      background: var(--background);
+      z-index: 1;
+      position: relative;
+      padding: 0 1em;
+      display: inline-block;
+    }
+
+    hr {
+      position: absolute;
+      width: 100%;
+      bottom: 0.03em;
+      border: none;
+      border-bottom: 1px solid var(--secondaryText);
+    }
+  }
+}
