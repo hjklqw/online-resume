@@ -20,12 +20,19 @@ export const LandingPage = () => {
 
   return (
     <div className={styles.wrapper} onClick={addRippleEffect}>
-      <span className={styles.bgCircle} />
-      <span className={styles.bgCircle2} />
+      <div className={styles.bgCircle}>
+        <span />
+        <span />
+      </div>
 
       <header className={styles.header}>
         <h2>Web Dev</h2>
         <h1>Michelle Poon</h1>
+        <h3>
+          Full-stack software eingeer and web developer,&nbsp;
+          <br />
+          specializing in the front end
+        </h3>
       </header>
       <span
         className={`${styles.rippleEffect} ${
