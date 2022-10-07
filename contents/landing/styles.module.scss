@@ -1,0 +1,114 @@
+@use 'assets/mixins' as *;
+
+.wrapper {
+  flex: 1;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem;
+  position: relative;
+
+  @media all and (max-width: 430px) {
+    padding: 5rem 2rem;
+  }
+}
+
+.header {
+  margin-top: 10vh;
+
+  h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: max(3.5rem, 12vw);
+    line-height: 1.2em;
+    padding-top: 5.5vw;
+    padding-left: 8vw;
+    position: relative;
+  }
+
+  h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: max(7rem, 20vw);
+    line-height: 1em;
+    opacity: 0.1;
+    position: absolute;
+    color: transparent;
+    // -webkit-text-stroke: 3px var(--text);
+    text-shadow: 0 0 1rem var(--text);
+  }
+}
+
+.bgCircle {
+  $diameter: 45vw;
+  position: absolute;
+  border-radius: 50%;
+  width: $diameter;
+  height: $diameter;
+  background: var(--primary);
+  opacity: 0.2;
+  right: -($diameter / 3);
+  top: -($diameter / 3);
+}
+
+.bgCircle2 {
+  $diameter: 49vw;
+  position: absolute;
+  border-radius: 50%;
+  width: $diameter;
+  height: $diameter;
+  border: 3px solid var(--primary);
+  opacity: 0.2;
+  right: -($diameter / 3);
+  top: -($diameter / 3);
+}
+
+$rippleDiameterStart: 1rem;
+$rippleDiameterEnd: 20rem;
+$rippleCenterPoint: ($rippleDiameterStart - $rippleDiameterEnd) / 2;
+
+.rippleEffect {
+  color: var(--primary);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  width: $rippleDiameterStart;
+  height: $rippleDiameterStart;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+
+  &.showing {
+    opacity: 1;
+    animation: ripple 1s forwards;
+    backdrop-filter: blur(8px);
+    @include glow(8px);
+  }
+}
+
+@keyframes ripple {
+  5% {
+    width: $rippleDiameterEnd / 1.5;
+    height: $rippleDiameterEnd / 1.5;
+    margin-top: $rippleCenterPoint / 1.5;
+    margin-left: $rippleCenterPoint / 1.5;
+  }
+  20%,
+  80%,
+  100% {
+    width: $rippleDiameterEnd;
+    height: $rippleDiameterEnd;
+    margin-top: $rippleCenterPoint;
+    margin-left: $rippleCenterPoint;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.4;
+    color: var(--secondary);
+  }
+  100% {
+    opacity: 0;
+    border-width: 1px;
+  }
+}

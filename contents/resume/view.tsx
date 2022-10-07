@@ -19,7 +19,7 @@ export const ResumePage = () => (
           const contents = (
             <>
               <div className={styles.icon}>
-                <info.icon />
+                <info.icon {...(info.iconProps || {})} />
               </div>
               <span className={styles.text}>{info.text}</span>
             </>

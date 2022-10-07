@@ -1,20 +1,37 @@
-import { IconType } from 'react-icons'
+import { IconBaseProps, IconType } from 'react-icons'
+
 import { MdEmail } from 'react-icons/md'
 import { SiLinkedin, SiNpm } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
+import { IoLocationSharp } from 'react-icons/io5'
+
 import { ExperienceModel } from './models'
 
-export const contactInfo: { icon: IconType; text: string; isLink?: boolean }[] =
-  [
-    { icon: MdEmail, text: 'mp.hjklqw@gmail.com' },
-    {
-      icon: SiLinkedin,
-      text: 'linkedin.com/in/michellepoon-dev',
-      isLink: true,
-    },
-    { icon: FaGithub, text: 'github.com/hjklqw', isLink: true },
-    { icon: SiNpm, text: 'npmjs.com/~michellepoonnoka', isLink: true },
-  ]
+export const contactInfo: {
+  icon: IconType
+  iconProps?: IconBaseProps
+  text: string
+  isLink?: boolean
+}[] = [
+  { icon: MdEmail, text: 'mp.hjklqw@gmail.com' },
+  {
+    icon: SiLinkedin,
+    text: 'linkedin.com/in/michellepoon-dev',
+    isLink: true,
+  },
+  {
+    icon: FaGithub,
+    iconProps: { size: '1.1em', style: { marginLeft: '-0.05em' } },
+    text: 'github.com/hjklqw',
+    isLink: true,
+  },
+  { icon: SiNpm, text: 'npmjs.com/~michellepoonnoka', isLink: true },
+  {
+    icon: IoLocationSharp,
+    iconProps: { size: '1.4em', style: { marginLeft: '-0.2em' } },
+    text: 'Canada',
+  },
+]
 
 export const education: ExperienceModel = {
   title: 'BCS Honours Game Development Stream',

@@ -19,14 +19,15 @@ const App = ({ Component, pageProps }: Props) => (
       description={Component.description}
       structuredData={Component.meta}
     />
-    <GlobalLayout
-      subLayout={
-        Component.usePageLayout !== false ? (
-          <PageLayout title={Component.title} subtitle={Component.subtitle} />
-        ) : undefined
-      }
-      mainContents={<Component {...pageProps} />}
-    />
+    <GlobalLayout>
+      {Component.usePageLayout !== false ? (
+        <PageLayout title={Component.title} subtitle={Component.subtitle}>
+          <Component {...pageProps} />
+        </PageLayout>
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </GlobalLayout>
   </RecoilRoot>
 )
 
