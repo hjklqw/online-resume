@@ -8,7 +8,7 @@ import {
   skills,
 } from './data'
 import { ExperienceInfo } from './experienceInfo'
-import { ExperienceInfoOrientation } from './models'
+import { ContactInfoType, ExperienceInfoOrientation } from './models'
 
 export const ResumePage = () => (
   <>
@@ -26,10 +26,14 @@ export const ResumePage = () => (
           )
           return (
             <div key={i}>
-              {info.isLink ? (
+              {info.type !== ContactInfoType.NONE ? (
                 <a
                   key={i}
-                  href={`https://${info.text}`}
+                  href={
+                    info.type === ContactInfoType.EMAIL
+                      ? `mailto:${info.text}`
+                      : `https://${info.text}`
+                  }
                   target="_blank"
                   rel="noreferrer"
                 >

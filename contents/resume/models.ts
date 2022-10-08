@@ -9,3 +9,9 @@ export enum ExperienceInfoOrientation {
   VERTICAL = 'vertical',
   HORIZONTAL = 'horizontal',
 }
+
+export enum ContactInfoType {
+  LINK,
+  EMAIL,
+  NONE,
+}

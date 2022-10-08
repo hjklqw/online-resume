@@ -12,7 +12,7 @@ import styles from './styles.module.scss'
 
 import { Routes } from '/assets/routes'
 import { Theme } from '/assets/theme'
-import { getScrollRoot } from './utils'
+import { getScrollRoot } from 'utils/document'
 
 type Props = {
   theme: string | undefined

@@ -1,28 +1,31 @@
+import React from 'react'
+
 import styles from './styles.module.scss'
+import { Section } from './models'
 
 type Props = {
-  label: string
-  top: number
-  index: number
-  currSelectedIndex: number
-  setActiveNavIndex: React.Dispatch<React.SetStateAction<number>>
+  section: Section
+  activeNavSection: Section
+  setActiveNavSection: React.Dispatch<React.SetStateAction<Section>>
+  top?: string
 }
 
-export const NavDot = (props: Props) => {
-  const isActive = props.index === props.currSelectedIndex
+export const NavDot = ({ section, setActiveNavSection, ...props }: Props) => {
+  const isActive = section === props.activeNavSection
   return (
     <div
-      className={`${styles.dot} ${isActive ? styles.active : ''}`}
-      style={{ top: `${props.top}%` }}
+      className={`${styles.navDot} ${isActive ? styles.active : ''}`}
+      style={{ top: props.top }}
       onClick={() => {
-        props.setActiveNavIndex(props.index)
+        setActiveNavSection(section)
         document
-          .getElementById(props.label)
+          .getElementById(section)
           ?.scrollIntoView({ block: 'start', behavior: 'smooth' })
       }}
-      title={props.label}
+      title={section}
     >
-      <span className={styles.label}>{props.label}</span>
+      <span className={styles.dot} />
+      <span className={styles.label}>{section}</span>
     </div>
   )
 }

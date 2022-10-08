@@ -1,35 +1,26 @@
 import { IconBaseProps, IconType } from 'react-icons'
-
-import { MdEmail } from 'react-icons/md'
-import { SiLinkedin, SiNpm } from 'react-icons/si'
-import { FaGithub } from 'react-icons/fa'
 import { IoLocationSharp } from 'react-icons/io5'
 
-import { ExperienceModel } from './models'
+import { ContactInfoType, ExperienceModel } from './models'
+import { contactInfo as baseContactInfo } from 'assets/sharedData'
 
 export const contactInfo: {
   icon: IconType
   iconProps?: IconBaseProps
   text: string
-  isLink?: boolean
+  type: ContactInfoType
 }[] = [
-  { icon: MdEmail, text: 'mp.hjklqw@gmail.com' },
-  {
-    icon: SiLinkedin,
-    text: 'linkedin.com/in/michellepoon-dev',
-    isLink: true,
-  },
-  {
-    icon: FaGithub,
-    iconProps: { size: '1.1em', style: { marginLeft: '-0.05em' } },
-    text: 'github.com/hjklqw',
-    isLink: true,
-  },
-  { icon: SiNpm, text: 'npmjs.com/~michellepoonnoka', isLink: true },
+  ...baseContactInfo.map((info) => ({
+    icon: info.icon,
+    iconProps: info.iconProps,
+    text: info.url,
+    type: info.isEmail ? ContactInfoType.EMAIL : ContactInfoType.LINK,
+  })),
   {
     icon: IoLocationSharp,
     iconProps: { size: '1.4em', style: { marginLeft: '-0.2em' } },
     text: 'Canada',
+    type: ContactInfoType.NONE,
   },
 ]
 

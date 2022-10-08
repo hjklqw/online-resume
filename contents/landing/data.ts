@@ -11,16 +11,16 @@ export const highlights: {
 }[] = [
   {
     hook: 'Clean code',
-    description:
-      'Reads like natural language; visit the resume page for links to samples',
+    description: [
+      'Reads like natural language; self-documenting, clear intentions.',
+      'Visit the links below to view samples!',
+    ],
     icon: BsFileEarmarkCodeFill,
   },
   {
     hook: 'Speed',
-    description: [
-      'This entire site was built in a day—under 24 hours!',
-      'This page, from conception to implementation, took just one night.',
-    ],
+    description:
+      'This entire site was built within two days—from conception, design, to implementation and deployment!',
     icon: MdSpeed,
   },
   {
