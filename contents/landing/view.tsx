@@ -45,7 +45,6 @@ export const LandingPage = () => {
             section={Section.OVERVIEW}
             activeNavSection={activeNavSection}
             setActiveNavSection={setActiveNavSection}
-            top="0"
           />
           <h2>Web Dev</h2>
           <h1>Michelle Poon</h1>

@@ -7,7 +7,6 @@ type Props = {
   section: Section
   activeNavSection: Section
   setActiveNavSection: React.Dispatch<React.SetStateAction<Section>>
-  top?: string
 }
 
 export const NavDot = ({ section, setActiveNavSection, ...props }: Props) => {
@@ -15,7 +14,6 @@ export const NavDot = ({ section, setActiveNavSection, ...props }: Props) => {
   return (
     <div
       className={`${styles.navDot} ${isActive ? styles.active : ''}`}
-      style={{ top: props.top }}
       onClick={() => {
         setActiveNavSection(section)
         document
