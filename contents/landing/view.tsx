@@ -1,40 +1,19 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 import styles from './styles.module.scss'
 
 import { NavDot } from './navDot'
 import { highlights } from './data'
-import { getScrollRoot } from 'utils/document'
-import { Coords, Section } from './models'
+import { Section } from './models'
 import { contactInfo } from '/assets/sharedData'
 
-/** In miliseconds */
-const RIPPLE_EFFECT_ANIM_LENGTH = 500
-
 export const LandingPage = () => {
-  const [isShowingRippleEffect, setShowingRippleEffect] =
-    useState<boolean>(false)
-  const rippleEffectCoords = useRef<Coords>({ x: 0, y: 0 })
-
   const [activeNavSection, setActiveNavSection] = useState<Section>(
     Section.OVERVIEW
   )
 
-  const addRippleEffect = useCallback(
-    (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-      if (isShowingRippleEffect) return
-      rippleEffectCoords.current = {
-        x: e.clientX,
-        y: (getScrollRoot()?.scrollTop || 0) + e.clientY,
-      }
-      setShowingRippleEffect(true)
-      setTimeout(() => setShowingRippleEffect(false), RIPPLE_EFFECT_ANIM_LENGTH)
-    },
-    [isShowingRippleEffect, setShowingRippleEffect]
-  )
-
   return (
-    <div className={styles.wrapper} onClick={addRippleEffect}>
+    <div className={styles.wrapper}>
       <div className={styles.bgCircle}>
         <span />
         <span />
@@ -98,16 +77,6 @@ export const LandingPage = () => {
             </a>
           ))}
         </section>
-
-        <span
-          className={`${styles.rippleEffect} ${
-            isShowingRippleEffect ? styles.showing : ''
-          }`}
-          style={{
-            top: rippleEffectCoords.current.y,
-            left: rippleEffectCoords.current.x,
-          }}
-        />
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import { themeAtom } from '/utils/recoil/theme.atom'
 import { useMountedRecoilState } from '/utils/recoil/useMountedRecoilState'
 import { Header } from './header'
+import { useRippleEffect } from './rippleEffect'
 
 type Props = {
   children: React.ReactNode
@@ -10,12 +11,17 @@ type Props = {
 
 export const GlobalLayout = ({ children }: Props) => {
   const [theme, setTheme] = useMountedRecoilState(themeAtom)
+  const { addRippleEffect, Effect } = useRippleEffect()
 
   return (
-    <div className={`${styles.wrapper} theme-${theme}`}>
+    <div
+      className={`${styles.wrapper} theme-${theme}`}
+      onClick={addRippleEffect}
+    >
       <Header theme={theme} setTheme={setTheme} />
       {children}
       <footer className={styles.footer}>&copy; Michelle Poon, 2022</footer>
+      <Effect />
     </div>
   )
 }

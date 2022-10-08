@@ -1,0 +1,51 @@
+@use 'assets/mixins' as *;
+
+$rippleDiameterStart: 1rem;
+$rippleDiameterEnd: 20rem;
+$rippleCenterPoint: ($rippleDiameterStart - $rippleDiameterEnd) / 2;
+
+.rippleEffect {
+  color: var(--primary);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  width: $rippleDiameterStart;
+  height: $rippleDiameterStart;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+
+  &.showing {
+    opacity: 1;
+    animation: ripple 1s forwards;
+    backdrop-filter: blur(8px);
+    @include glow(8px);
+  }
+}
+
+@keyframes ripple {
+  5% {
+    width: $rippleDiameterEnd / 1.5;
+    height: $rippleDiameterEnd / 1.5;
+    margin-top: $rippleCenterPoint / 1.5;
+    margin-left: $rippleCenterPoint / 1.5;
+  }
+  20%,
+  80%,
+  100% {
+    width: $rippleDiameterEnd;
+    height: $rippleDiameterEnd;
+    margin-top: $rippleCenterPoint;
+    margin-left: $rippleCenterPoint;
+    opacity: 1;
+    color: var(--secondary);
+    @include glow(10px);
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    border-width: 1px;
+  }
+}
