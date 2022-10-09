@@ -28,7 +28,7 @@ export const LandingPage = () => {
           <h2>Web Dev</h2>
           <h1>Michelle Poon</h1>
           <h3>
-            Full-stack software eingeer and web developer,&nbsp;
+            Full-stack software engineer and web developer,&nbsp;
             <br />
             specializing in the front end
           </h3>
