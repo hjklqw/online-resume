@@ -51,7 +51,12 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
         'DevOps (Github, Jira, Azure DevOps)',
       ],
       'Experience with:',
-      ['Angular', 'Azure'],
+      [
+        'Other frameworks and languages (Angular, Python, C++, Java)',
+        'Other databases (Postgres, Redis)',
+        'Hosting and other DevOps (Docker, Azure Cloud, Github CI/CD)',
+        'Gaming and creative software (Unreal Engine, 3ds Max, Blender, ZBrush, Sketchup, Photoshop, Clip Studio Paint, Daz Studio, FL Studio)',
+      ],
       'Extensive full-stack, responsive, cross-browser and cross-platform development practise',
       'Speed and willingness to learn and apply new programming languages, styles, and concepts',
     ],
