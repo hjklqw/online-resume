@@ -16,6 +16,7 @@
 
   --cardBackground: #f0ede6;
   --cardText: #413722;
+  --cardTextSecondary: #ffa300;
   --cardPrimary: #72894a;
   --cardAccent: #ffab00;
 }
@@ -34,6 +35,7 @@
 
   --cardBackground: var(--text);
   --cardText: var(--background);
+  --cardTextSecondary: #956000;
   --cardPrimary: var(--primary);
   --cardAccent: var(--accent);
 }

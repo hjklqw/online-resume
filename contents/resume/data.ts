@@ -1,5 +1,8 @@
 import { IconBaseProps, IconType } from 'react-icons'
 import { IoLocationSharp } from 'react-icons/io5'
+import { RiHonourLine } from 'react-icons/ri'
+import { TbAward } from 'react-icons/tb'
+import { MdOutlineSchool } from 'react-icons/md'
 
 import { ContactInfoType, ExperienceModel } from './models'
 import { contactInfo as baseContactInfo } from 'assets/sharedData'
@@ -156,5 +159,79 @@ export const miscExperience: ExperienceModel[] = [
       'Marked the assignments of first year game development students, giving detailed feedback concerning design and code concepts, both providing thorough support and gaining experience in doing so, along with learning from the diversity of their work',
       'Communicated often with the professor to ensure that feedback delivery was well done and within the bounds of what he was looking for, gaining proficiency and understanding in methods of evaluating complex concepts',
     ],
+  },
+]
+
+enum AwardType {
+  HONORS,
+  SCHOLARSHIP,
+  AWARD,
+}
+
+export const scholarshipsAndAwards: {
+  title: string
+  date: string
+  type: AwardType
+}[] = [
+  { title: "Dean's Honour List", date: 'January 2015', type: AwardType.HONORS },
+  {
+    title: 'General In-Course Scholarship',
+    date: 'January 2015',
+    type: AwardType.SCHOLARSHIP,
+  },
+  {
+    title: 'Regional Japanese Speech Contest, 2nd place',
+    date: 'January 2015',
+    type: AwardType.AWARD,
+  },
+  { title: "Dean's Honour List", date: 'January 2013', type: AwardType.HONORS },
+  {
+    title: 'Lester Bowles Pearson Scholarship',
+    date: 'January 2013',
+    type: AwardType.SCHOLARSHIP,
+  },
+]
+
+export const awardTypeIconMap: {
+  [key in AwardType]: {
+    icon: IconType
+    size?: string
+  }
+} = {
+  [AwardType.HONORS]: {
+    icon: RiHonourLine,
+    size: '0.9em',
+  },
+  [AwardType.SCHOLARSHIP]: {
+    icon: MdOutlineSchool,
+    size: '1.08em',
+  },
+  [AwardType.AWARD]: {
+    icon: TbAward,
+  },
+}
+
+export const languages: {
+  name: string
+  proficiency: string
+  description: string
+}[] = [
+  {
+    name: 'English',
+    proficiency: 'Native',
+    description:
+      "The language I've been using professionally since the beginning",
+  },
+  { name: 'Cantonese', proficiency: 'Native', description: 'Speaking only' },
+  {
+    name: 'Japanese',
+    proficiency: 'Advanced',
+    description:
+      'Limited working proficiency, but fine for non-technical conversations',
+  },
+  {
+    name: 'German',
+    proficiency: 'Intermediate-low',
+    description: "Haven't used in a while!",
   },
 ]
