@@ -13,6 +13,7 @@ import {
 import { ExperienceInfo } from './experienceInfo'
 import { ContactInfoType, ExperienceInfoOrientation } from './models'
 import { Section } from './section'
+import { JobInfo } from './jobInfo'
 
 export const ResumePage = () => (
   <>
@@ -82,11 +83,7 @@ export const ResumePage = () => (
 
     <Section headerText="Experience">
       {experience.map((exp, i) => (
-        <ExperienceInfo
-          model={exp}
-          orientation={ExperienceInfoOrientation.HORIZONTAL}
-          key={i}
-        />
+        <JobInfo model={exp} key={i} />
       ))}
     </Section>
 

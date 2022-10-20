@@ -4,7 +4,7 @@ import { RiHonourLine } from 'react-icons/ri'
 import { TbAward } from 'react-icons/tb'
 import { MdOutlineSchool } from 'react-icons/md'
 
-import { ContactInfoType, ExperienceModel } from './models'
+import { ContactInfoType, ExperienceModel, JobModel } from './models'
 import { contactInfo as baseContactInfo } from 'assets/sharedData'
 
 export const contactInfo: {
@@ -82,43 +82,106 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
   },
 ]
 
-export const experience: ExperienceModel[] = [
+export const experience: JobModel[] = [
   {
     title: 'Senior Front-End Developer',
-    location: 'EInc., Remote',
+    company: {
+      name: 'EInc.',
+      location: 'Remote',
+      industry: 'Automobile',
+      size: 'Medium (100 people)',
+    },
+    stack: 'React, Next.js, Apollo GraphQL, Cypress, Jest, Storybook',
+    teamSize: '7 (+2 for designers and manager)',
     dates: 'November 2021 - Present',
-    points: [
-      'Worked in an agile team to add new features to a large car dealership management app, creating animated dashboard components, as well as laying out large amounts of data in clear and attractive ways',
-      'Established the basis for complex integration testing via creation of custom cypress commands',
-    ],
+    methodology: 'Agile',
+    description: {
+      'Feature implementation within a large existing codebase': [
+        'Added new features, such as heavy data displays and animated dashboard components, to a large car dealership management app off Figma design files, ensuring pixel-perfect implementation',
+      ],
+      'Test writing': [
+        'Established the basis for complex integration testing via creation of custom cypress commands',
+      ],
+      'Bug fixing and reporting': [
+        'Addressed issues found on Sentry, manual or automated testing, or Slack threads in a timely manner',
+        'Created tickets with clear descriptions, reproduction steps, and sometimes possible solutions, adding the proper categories and labels to ensure intelligibility and organization',
+      ],
+    },
   },
   {
     title: 'Web and Software Developer',
-    location: 'Noka Software and Creative Inc, Remote',
+    company: {
+      name: 'Noka Software and Creative Inc.',
+      location: 'Remote',
+      industry: 'Consulting',
+      size: 'Super small (7 people)',
+    },
+    stack: 'React, Next.js, SASS, Cypress, Jest',
+    teamSize: '~5 for first project, then alone!',
+    methodology: 'RAD/Waterfall',
     dates: 'May 2020 – November 2021',
-    points: [
-      'Independently built a fully responsive, internationalized site with a complex form system, delivering a finished and polished product to the client in under four weeks',
-      'Published two open-source React libraries under the company’s discretion, then used them to successfully speed up development for subsequent projects',
-    ],
+    description: {
+      'Start-to-finish full-stack development and delivery': [
+        'Independently built a fully responsive, internationalized site with a complex form system, PDF generation, and email (SendGrid) integration',
+        'Delivered the finished and polished product to the client in under four weeks',
+      ],
+      'Project architecturing, design, and implementation': [
+        'Gathered business requirements and determined the stack of the project, proposing architecture that would minimize costs, and implementing the code to a rapid development cycle',
+      ],
+      'Open-source development': [
+        "Published two open-source React libraries under the company's discretion, then used them to successfully speed up development for subsequent projects",
+      ],
+    },
   },
   {
     title: 'Full Stack Software Engineer',
-    location: 'Thomson Reuters, Toronto ON',
+    company: {
+      name: 'Thomson Reuters',
+      location: 'Toronto ON',
+      industry: 'News, Legal, Media, Technology',
+      size: 'Large (10000+ employees)',
+    },
+    stack: 'Angular, C# .Net, CosmosDB, Azure, Swagger',
+    teamSize: '~10',
+    methodology: 'Agile Scrum',
     dates: 'September 2018 – February 2020',
-    points: [
-      'Designed and implemented full-stack solutions for an Angular greenfield project, delivering complete features with automated test coverage within one-week sprints and becoming the main UX developer shortly after joining the team',
-      'Contributed to the fundamental .Net server-side structure of the application, implementing a scalable microservice architecture on Azure, and connecting and optimizing requests and responses',
-    ],
+    description: {
+      'Greenfield project construction': [
+        'Designed and implemented full-stack solutions for an Angular greenfield project, delivering complete features with automated test coverage within one-week sprints',
+      ],
+      'Business requirement design and implementation': [
+        'Determined the best user experience to address business requirements, implementing them full-stack and completing solutions that thrilled consumers',
+        'Became the main UI/UX developer shortly after joining the team',
+      ],
+      'Microservice creation': [
+        'Contributed to the fundamental structure of the application, implementing a scalable microservice architecture on Azure',
+        'Created REST API endpoints in a C# .Net server, connecting and optimizing requests and responses',
+      ],
+    },
   },
   {
     title: 'Full Stack Web Developer',
-    location: 'OpenText, Ottawa ON',
+    company: {
+      name: 'OpenText',
+      location: 'Ottawa ON',
+      industry: 'Software Development',
+      size: 'Large (10000+ employees)',
+    },
+    stack: 'jQuery, OScript (company-specific language), Java',
+    teamSize: '2-3 (Worked 98% indepedently)',
+    methodology: 'DevOps',
     dates: 'February 2016 – August 2018',
-    points: [
-      'Created a WYSIWYG editor integrated with a large scale CMS to dynamically generate product pages from database records, minimizing manual work for product managers and removing it for developers',
-      'Built the front page of the customer support site using custom jQuery widgets and REST API calls',
-      'Developed internal-use XML conversion software in Java',
-    ],
+    description: {
+      'New feature design and implementation': [
+        'Built the front page of the customer support site using custom jQuery widgets and REST API calls',
+      ],
+      'Old feature redesign, improvement, and overhaul': [
+        'Created a WYSIWYG editor integrated with a large scale CMS to dynamically generate product pages from database records, minimizing manual work for product managers and removing it for developers',
+      ],
+      'Internal tool development': [
+        'Developed internal-use XML conversion software in Java',
+      ],
+    },
   },
 ]
 

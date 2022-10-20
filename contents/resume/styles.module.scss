@@ -133,6 +133,55 @@ section.contactInfo {
   }
 }
 
+.jobInfo {
+  .experienceData > span {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:first-child):not(:nth-child(2)) {
+      margin-bottom: 0.5em;
+    }
+
+    & > span {
+      &:first-child {
+        color: var(--primary);
+        font-weight: 600;
+
+        &::before {
+          content: '\203A';
+          margin-right: 0.4em;
+          font-size: 1.3em;
+          line-height: 1em;
+        }
+      }
+      &:last-child {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .experiencePoints {
+    .task {
+      & > span {
+        margin-left: 1.5rem;
+        font-weight: 500;
+        color: var(--secondaryText);
+      }
+    }
+  }
+
+  @media all and (max-width: $horizontalSectionCutoffScreenWidth) {
+    margin-bottom: 2.5rem !important;
+
+    .experiencePoints {
+      margin-top: 1.5rem;
+      .task > span {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 .awardsInfo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
