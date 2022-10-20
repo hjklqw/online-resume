@@ -4,8 +4,50 @@ import { RiHonourLine } from 'react-icons/ri'
 import { TbAward } from 'react-icons/tb'
 import { MdOutlineSchool } from 'react-icons/md'
 
-import { ContactInfoType, ExperienceModel, JobModel } from './models'
+import {
+  ContactInfoType,
+  ExperienceModel,
+  JobModel,
+  DataSection,
+} from './models'
 import { contactInfo as baseContactInfo } from 'assets/sharedData'
+
+export const sections: {
+  [section in DataSection]: { id: string; label: string }
+} = {
+  [DataSection.OVERVIEW]: {
+    id: 'overview',
+    label: 'Overview',
+  },
+  [DataSection.CONTACT]: {
+    id: 'contact',
+    label: 'Contact',
+  },
+  [DataSection.EDUCATION]: {
+    id: 'education',
+    label: 'Education',
+  },
+  [DataSection.SKILLS]: {
+    id: 'skills',
+    label: 'Skills',
+  },
+  [DataSection.EXPERIENCE]: {
+    id: 'experience',
+    label: 'Experience',
+  },
+  [DataSection.MISC_EXPERIENCE]: {
+    id: 'misc-experience',
+    label: 'Misc Experience',
+  },
+  [DataSection.AWARDS]: {
+    id: 'awards',
+    label: 'Scholarships and Awards',
+  },
+  [DataSection.LANGUAGES]: {
+    id: 'languages',
+    label: 'Languages',
+  },
+}
 
 export const contactInfo: {
   icon: IconType
@@ -37,6 +79,9 @@ export const education: ExperienceModel = {
     'Minor in Japanese and German',
   ],
 }
+
+export const overview =
+  'Full-stack developer with 7+ years of experience, specializing in front-end web development with modern JS (React, Typescript, ES6+).'
 
 export const skills: { category: string; points: (string | string[])[] }[] = [
   {

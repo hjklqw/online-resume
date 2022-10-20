@@ -30,3 +30,14 @@ export enum ContactInfoType {
   EMAIL,
   NONE,
 }
+
+export enum DataSection {
+  OVERVIEW,
+  CONTACT,
+  EDUCATION,
+  SKILLS,
+  EXPERIENCE,
+  MISC_EXPERIENCE,
+  AWARDS,
+  LANGUAGES,
+}

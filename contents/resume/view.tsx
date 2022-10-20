@@ -7,21 +7,45 @@ import {
   experience,
   languages,
   miscExperience,
+  overview,
   scholarshipsAndAwards,
+  sections,
   skills,
 } from './data'
 import { ExperienceInfo } from './experienceInfo'
-import { ContactInfoType, ExperienceInfoOrientation } from './models'
+import {
+  ContactInfoType,
+  DataSection,
+  ExperienceInfoOrientation,
+} from './models'
 import { Section } from './section'
 import { JobInfo } from './jobInfo'
+import Link from 'next/link'
 
 export const ResumePage = () => (
   <>
+    <Section section={DataSection.OVERVIEW} hideSeparator>
+      {overview}
+    </Section>
+
+    <p>See specifics:</p>
+    <nav className={styles.nav}>
+      {Object.values(sections)
+        .slice(1)
+        .map((s) => (
+          <Link href={`#${s.id}`} key={s.id}>
+            {s.label}
+          </Link>
+        ))}
+    </nav>
+
+    <hr className={styles.separator} />
+
     <div className={styles.row}>
       <Section
-        headerText="Contact"
-        hideSeparator
+        section={DataSection.CONTACT}
         className={styles.contactInfo}
+        hideSeparator
       >
         {contactInfo.map((info, i) => {
           const contents = (
@@ -55,12 +79,12 @@ export const ResumePage = () => (
         })}
       </Section>
 
-      <Section headerText="Education">
+      <Section section={DataSection.EDUCATION}>
         <ExperienceInfo model={education} />
       </Section>
     </div>
 
-    <Section headerText="Skills">
+    <Section section={DataSection.SKILLS}>
       {skills.map((skill, i) => (
         <div key={i} className={styles.skill}>
           <h3 className={styles.categoryText}>{skill.category}</h3>
@@ -81,13 +105,13 @@ export const ResumePage = () => (
       ))}
     </Section>
 
-    <Section headerText="Experience">
+    <Section section={DataSection.EXPERIENCE}>
       {experience.map((exp, i) => (
         <JobInfo model={exp} key={i} />
       ))}
     </Section>
 
-    <Section headerText="Misc Experience">
+    <Section section={DataSection.MISC_EXPERIENCE}>
       {miscExperience.map((exp, i) => (
         <ExperienceInfo
           model={exp}
@@ -97,7 +121,7 @@ export const ResumePage = () => (
       ))}
     </Section>
 
-    <Section headerText="Scholarships and Awards">
+    <Section section={DataSection.AWARDS}>
       <div className={styles.awardsInfo}>
         {scholarshipsAndAwards.map((s, i) => {
           const icon = awardTypeIconMap[s.type]
@@ -112,7 +136,7 @@ export const ResumePage = () => (
       </div>
     </Section>
 
-    <Section headerText="Languages">
+    <Section section={DataSection.LANGUAGES}>
       <div className={`${styles.awardsInfo} ${styles.languagesInfo}`}>
         {languages.map((language, i) => (
           <div key={i} className={styles.award}>

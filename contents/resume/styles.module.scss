@@ -71,6 +71,12 @@ $hrBorder: 1px dashed var(--primary);
 
 section.info {
   margin-bottom: 3rem;
+  position: relative;
+
+  .scrollAnchor {
+    position: absolute;
+    top: -4rem;
+  }
 }
 
 section.contactInfo {
@@ -229,6 +235,33 @@ section.contactInfo {
       color: var(--primary);
       font-weight: 600;
       margin-bottom: 0.35rem;
+    }
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 3rem;
+
+  a {
+    position: relative;
+    font-weight: 600;
+
+    &::after {
+      content: '';
+      height: 5px;
+      width: 20%;
+      display: block;
+      margin-top: 0.35rem;
+      background: var(--primary);
+      transition: width 0.15s ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+      background: var(--secondary);
     }
   }
 }

@@ -1,7 +1,10 @@
 import styles from './styles.module.scss'
 
+import { DataSection } from './models'
+import { sections } from './data'
+
 type Props = {
-  headerText: string
+  section: DataSection
   children: React.ReactNode
   hideSeparator?: boolean
   className?: string
@@ -9,7 +12,7 @@ type Props = {
 
 /** An info section with a separator on top of it. */
 export const Section = ({
-  headerText,
+  section,
   children,
   hideSeparator,
   className,
@@ -17,7 +20,8 @@ export const Section = ({
   <>
     {!hideSeparator && <hr className={styles.separator} />}
     <section className={`${styles.info} ${className || ''}`}>
-      <h2>{headerText}</h2>
+      <span className={styles.scrollAnchor} id={sections[section].id} />
+      <h2>{sections[section].label}</h2>
       {children}
     </section>
   </>
