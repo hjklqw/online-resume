@@ -1,0 +1,24 @@
+.backToTopButton {
+  $size: 3rem;
+  width: $size;
+  height: $size;
+  background: var(--cardText);
+  color: var(--cardBackground);
+  border: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: var(--cardTextSecondary);
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
