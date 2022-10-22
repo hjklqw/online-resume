@@ -136,7 +136,8 @@ export const experience: JobModel[] = [
       industry: 'Automobile',
       size: 'Medium (100 people)',
     },
-    stack: 'React, Next.js, Apollo GraphQL, Cypress, Jest, Storybook',
+    stack:
+      'React, Next.js, Styled-Components, Apollo GraphQL, Cypress, Jest, Storybook',
     teamSize: '7 (+2 for designers and manager)',
     dates: 'November 2021 - Present',
     methodology: 'Agile',
@@ -161,7 +162,7 @@ export const experience: JobModel[] = [
       industry: 'Consulting',
       size: 'Super small (7 people)',
     },
-    stack: 'React, Next.js, SASS, Cypress, Jest',
+    stack: 'React, Next.js, SASS, Node.js Express, MongoDB, Cypress, Jest',
     teamSize: '~5 for first project, then alone!',
     methodology: 'RAD/Waterfall',
     dates: 'May 2020 – November 2021',
@@ -170,7 +171,7 @@ export const experience: JobModel[] = [
         'Independently built a fully responsive, internationalized site with a complex form system, PDF generation, and email (SendGrid) integration',
         'Delivered the finished and polished product to the client in under four weeks',
       ],
-      'Project architecturing, design, and implementation': [
+      'Project architecting, design, and implementation': [
         'Gathered business requirements and determined the stack of the project, proposing architecture that would minimize costs, and implementing the code to a rapid development cycle',
       ],
       'Open-source development': [
