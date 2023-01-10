@@ -30,11 +30,6 @@ const navItems: {
     label: 'Home',
     alt: 'Overview',
   },
-  [Routes.RESUME]: {
-    icon: TbClipboardText,
-    label: 'Resume',
-    alt: 'Resume',
-  },
   [Routes.DELICIOUSNESS]: {
     icon: GiHeartDrop,
     label: 'Deliciousness',
@@ -79,7 +74,7 @@ export const Header = ({ theme, setTheme }: Props) => {
 
   return (
     <section className={className}>
-      <Link href={Routes.RESUME}>
+      <Link href={Routes.LANDING}>
         <a className={styles.siteName} title="Home">
           The <span>O</span>nline Resume
         </a>

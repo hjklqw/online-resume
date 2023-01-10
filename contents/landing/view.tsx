@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BsFillDoorClosedFill } from 'react-icons/bs'
 
 import styles from './styles.module.scss'
 
@@ -42,6 +43,10 @@ export const LandingPage = () => {
             activeNavSection={activeNavSection}
             setActiveNavSection={setActiveNavSection}
           />
+          <article className={styles.notice}>
+            <BsFillDoorClosedFill />
+            Currently not looking for new roles.
+          </article>
           {highlights.map((highlight, i) => (
             <div className={styles.highlight} key={i}>
               <highlight.icon />
