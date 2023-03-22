@@ -348,38 +348,3 @@ section.links {
     padding: 0;
   }
 }
-
-.notice {
-  background-color: var(--cardText);
-  color: var(--cardBackground);
-  border-top: 0.5rem solid var(--cardAccent);
-  grid-column: 1 / span 3;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  line-height: 1.1em;
-
-  svg {
-    margin-right: 1rem;
-    flex-shrink: 0;
-  }
-
-  @media all and (max-width: 1050px) {
-    grid-column: unset;
-  }
-  @media all and (max-width: 812px) {
-    svg {
-      margin-right: 1.5rem;
-    }
-  }
-  @media all and (max-width: 512px) {
-    flex-direction: column;
-    svg {
-      margin-right: 0;
-      margin-bottom: 1rem;
-      font-size: 1.2em;
-    }
-  }
-}
