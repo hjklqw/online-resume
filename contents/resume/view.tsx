@@ -87,7 +87,9 @@ export const ResumePage = () => (
     <Section section={DataSection.SKILLS}>
       {skills.map((skill, i) => (
         <div key={i} className={styles.skill}>
-          <h3 className={styles.categoryText}>{skill.category}</h3>
+          <h3 className={styles.categoryText}>
+            <span>{skill.category}</span>
+          </h3>
           <ul>
             {skill.points.map((p, j) =>
               Array.isArray(p) ? (

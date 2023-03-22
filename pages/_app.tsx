@@ -32,7 +32,11 @@ const App = ({ Component, pageProps }: Props) => {
       />
       <GlobalLayout>
         {Component.usePageLayout !== false ? (
-          <PageLayout title={Component.title} subtitle={Component.subtitle}>
+          <PageLayout
+            title={Component.title}
+            subtitle={Component.subtitle}
+            maxWidth={Component.maxWidth}
+          >
             <Component {...pageProps} />
           </PageLayout>
         ) : (

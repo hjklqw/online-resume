@@ -18,7 +18,7 @@ $hrBorder: 1px dashed var(--primary);
   flex-shrink: 0;
 
   @media all and (min-width: $horizontalSectionCutoffScreenWidth) {
-    width: 220px;
+    width: 310px;
   }
 }
 
@@ -103,6 +103,20 @@ section.contactInfo {
     font-size: inherit;
     color: var(--secondaryText);
     @include horizontalSectionLeftData;
+
+    & > span {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px dashed var(--text);
+        margin-left: 0.5rem;
+        opacity: 0.5;
+      }
+    }
   }
 }
 

@@ -15,5 +15,6 @@ page.meta = {
   url: process.env.NEXT_PUBLIC_URL,
   email: 'mp.hjkqw@gmail.com',
 }
+page.maxWidth = 1750
 
 export default Resume
