@@ -114,8 +114,16 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
     points: [
       'Guided colleagues on syntax and logic flow while collaboratively developing an application',
       'Explained advanced programmatic and design ideas to first year game development students as a teaching assistant, providing technical feedback on assignments',
-      'Used the following communication and task tracking technologies:',
-      ['Slack', 'Microsoft Teams'],
+      'Used the following communication, design sharing, and task tracking technologies:',
+      [
+        'Slack',
+        'Microsoft Teams',
+        'Figma',
+        'Micro',
+        'Jira',
+        'Github',
+        'Azure DevOps',
+      ],
     ],
   },
   {
@@ -129,6 +137,30 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
 
 export const experience: JobModel[] = [
   {
+    title: 'Software Engineer',
+    company: {
+      name: 'TheoremOne',
+      location: 'Remote',
+      industry: 'Consultancy',
+      size: 'Medium-Large (600 people)',
+    },
+    stack: 'React, Next.js, Typescript, MUI, Cypress, Jest',
+    teamSize: '3 (FE only, Design and BE split with occasional sync-ups)',
+    dates: 'January 2023 - Present',
+    methodology: 'Agile',
+    description: {
+      'Project modernazation and fundamental setup': [
+        'Worked as part of a small team to rebuild a complex form project from scratch',
+        'Established the fundamental structure of the application, setting up the directory layout, file organization standards and specific coding conventions, base package dependencies, and creating a dynamic form generation and management system PoC to work off of',
+        'Introduced teammates to the usage of specific testing technologies and UI libraries with the PoC',
+      ],
+      'Requirements gathering and presentation': [
+        'Investigated, documented, and presented a catered dynamic form generation and data management system that is simple to use, understand, and is extensible to fit new or special business requirements',
+        'Presented well-organized, attractive work in bi-weekly sprint demos that delighted clients and improved team morale',
+      ],
+    },
+  },
+  {
     title: 'Senior Front-End Developer',
     company: {
       name: 'EInc.',
@@ -137,9 +169,9 @@ export const experience: JobModel[] = [
       size: 'Medium (100 people)',
     },
     stack:
-      'React, Next.js, Styled-Components, Apollo GraphQL, Cypress, Jest, Storybook',
+      'React, Next.js, Typescript, Styled-Components, Apollo GraphQL, Cypress, Jest, Storybook',
     teamSize: '7 (+2 for designers and manager)',
-    dates: 'November 2021 - Present',
+    dates: 'November 2021 - November 2022',
     methodology: 'Agile',
     description: {
       'Feature implementation within a large existing codebase': [
@@ -159,10 +191,11 @@ export const experience: JobModel[] = [
     company: {
       name: 'Noka Software and Creative Inc.',
       location: 'Remote',
-      industry: 'Consulting',
+      industry: 'Consultancy',
       size: 'Super small (7 people)',
     },
-    stack: 'React, Next.js, SASS, Node.js Express, MongoDB, Cypress, Jest',
+    stack:
+      'React, Next.js, Typescript, SASS, Node.js Express, MongoDB, Cypress, Jest',
     teamSize: '~5 for first project, then alone!',
     methodology: 'RAD/Waterfall',
     dates: 'May 2020 – November 2021',
@@ -187,7 +220,7 @@ export const experience: JobModel[] = [
       industry: 'News, Legal, Media, Technology',
       size: 'Large (10000+ employees)',
     },
-    stack: 'Angular, C# .Net, CosmosDB, Azure, Swagger',
+    stack: 'Angular, Typescript, C# .Net, CosmosDB, Azure, Swagger',
     teamSize: '~10',
     methodology: 'Agile Scrum',
     dates: 'September 2018 – February 2020',
