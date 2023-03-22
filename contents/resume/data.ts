@@ -149,7 +149,7 @@ export const experience: JobModel[] = [
     dates: 'January 2023 - Present',
     methodology: 'Agile',
     description: {
-      'Project modernazation and fundamental setup': [
+      'Project modernization and fundamental setup': [
         'Worked as part of a small team to rebuild a complex form project from scratch',
         'Established the fundamental structure of the application, setting up the directory layout, file organization standards and specific coding conventions, base package dependencies, and creating a dynamic form generation and management system PoC to work off of',
         'Introduced teammates to the usage of specific testing technologies and UI libraries with the PoC',
