@@ -81,7 +81,7 @@ export const education: ExperienceModel = {
 }
 
 export const overview =
-  'Full-stack developer with 7+ years of experience, specializing in front-end web development with modern JS (React, Typescript, ES6+).'
+  'Full-stack developer with 8+ years of experience, specializing in front-end web development with modern JS (React, Typescript, ES6+).'
 
 export const skills: { category: string; points: (string | string[])[] }[] = [
   {
@@ -92,11 +92,12 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
         'Javascript (React, Typescript, ES6+)',
         'React frameworks (Next.js, Redux, Recoil, React Router)',
         'HTML5',
-        'CSS3 (SASS, styled-components)',
+        'Styling (CSS3, SASS, styled-components, MUI)',
         'Backend technologies (Node.js Express, C# .Net Core)',
         'Databases (MongoDB, CosmosDB, Apollo GraphQL)',
         'Testing (Cypress, Jest, Storybook)',
         'DevOps (Github, Jira, Azure DevOps)',
+        'Source control (Git, Perforce)',
       ],
       'Experience with:',
       [
@@ -114,6 +115,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
     points: [
       'Guided colleagues on syntax and logic flow while collaboratively developing an application',
       'Explained advanced programmatic and design ideas to first year game development students as a teaching assistant, providing technical feedback on assignments',
+      'Comfortable with technical discussions across different disciplines, and conversing directly with Product Managers and Design teams',
       'Used the following communication, design sharing, and task tracking technologies:',
       [
         'Slack',
@@ -130,7 +132,8 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
     category: 'Organization/Teamwork',
     points: [
       'Collaborated in agile environments and participated in daily stand-ups, peer code reviews, pair programming and frequent technical discussions',
-      'Regularly worked remotely and with other remote, distributed, cross-functional team members',
+      'Regularly worked remotely and with other remote, distributed, and cross-functional team members',
+      'Self-motivated with a high degree of autonomy and comfortable with all team sizes',
     ],
   },
 ]
