@@ -7,6 +7,7 @@ import { RiLightbulbFlashLine, RiLightbulbLine } from 'react-icons/ri'
 import { IoIosHome } from 'react-icons/io'
 import { GiHeartDrop } from 'react-icons/gi'
 import { TbClipboardText } from 'react-icons/tb'
+import { AiTwotoneFolderOpen } from 'react-icons/ai'
 
 import styles from './styles.module.scss'
 
@@ -39,6 +40,11 @@ const navItems: {
     icon: GiHeartDrop,
     label: 'Deliciousness',
     alt: 'A recipe',
+  },
+  [Routes.PORTFOLIO]: {
+    icon: AiTwotoneFolderOpen,
+    label: 'Portfolio',
+    alt: 'Work samples',
   },
 }
 

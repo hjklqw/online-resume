@@ -83,6 +83,10 @@
           color: inherit;
         }
       }
+
+      &:last-of-type svg {
+        font-size: 1.12em;
+      }
     }
 
     .themeButton {
@@ -112,7 +116,7 @@
     }
   }
 
-  @media all and (max-width: 600px) {
+  @media all and (max-width: 752px) {
     nav a {
       &:not(:last-child) {
         margin-right: 1rem;
@@ -124,6 +128,14 @@
       span {
         display: none;
       }
+    }
+  }
+
+  @media all and (max-width: 380px) {
+    .siteName {
+      max-width: 0.7em;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }

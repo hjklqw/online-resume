@@ -1,0 +1,37 @@
+.sample {
+  display: flex;
+  margin-bottom: 5rem;
+
+  section.image {
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+
+    a {
+      filter: brightness(100%);
+
+      &:hover {
+        filter: brightness(120%);
+      }
+    }
+  }
+
+  section.description {
+    display: flex;
+    flex-direction: column;
+
+    section:first-child {
+      flex: 1;
+    }
+  }
+
+  @media all and (max-width: 940px) {
+    flex-direction: column;
+
+    section.image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
