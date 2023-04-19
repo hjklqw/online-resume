@@ -14,7 +14,7 @@ export const PortfolioPage = () => {
             (using the app directory), Typescript, and SASS.
             <br />
             Note that this is currently in-progress; only the Landing page and
-            About page is complete. Links will not work just yet.
+            About page is complete. Other links will not work just yet.
           </p>
         }
       />
