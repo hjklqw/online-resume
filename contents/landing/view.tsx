@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import styles from './styles.module.scss'
 
@@ -51,6 +52,11 @@ export const LandingPage = () => {
                   ? highlight.description.map((d, j) => <p key={j}>{d}</p>)
                   : highlight.description}
               </span>
+              {highlight.link && (
+                <Link href={highlight.link.route} title={highlight.link.alt}>
+                  <a>{highlight.link.text} &rarr;</a>
+                </Link>
+              )}
             </div>
           ))}
         </section>

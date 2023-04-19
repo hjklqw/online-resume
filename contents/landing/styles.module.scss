@@ -254,6 +254,8 @@ section.highlights {
     position: relative;
     overflow: hidden;
     border-top: 0.5rem solid var(--primary);
+    display: flex;
+    flex-direction: column;
 
     svg {
       position: absolute;
@@ -273,6 +275,22 @@ section.highlights {
         line-height: 1em;
         margin-bottom: 1rem;
         font-weight: 400;
+      }
+
+      &:last-of-type {
+        flex: 1;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-left: auto;
+      position: relative;
+
+      &:hover {
+        font-weight: 700;
+        letter-spacing: 0.5px;
       }
     }
 
