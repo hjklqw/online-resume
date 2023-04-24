@@ -13,8 +13,9 @@ export const PortfolioPage = () => {
             A sample site for a imaginary bakery, built with React, Next.js
             (using the app directory), Typescript, and SASS.
             <br />
-            Note that this is currently in-progress; the <i>Product</i> and{' '}
-            <i>Special</i> pages have not yet been created. However, all other
+            Note that this is currently in-progress; the
+            <i>Special</i> page has not yet been created, and product categories
+            other than <i>Cake</i> currently have no data. However, all other
             parts of the site are fully working and responsive!
           </p>
         }
