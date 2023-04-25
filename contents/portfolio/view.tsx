@@ -9,15 +9,20 @@ export const PortfolioPage = () => {
         githubLink="https://github.com/hjklqw/bakery-sample"
         imageSrc="bakery.png"
         description={
-          <p>
-            A sample site for a imaginary bakery, built with React, Next.js
-            (using the app directory), Typescript, and SASS.
-            <br />
-            Note that this is currently in-progress; the
-            <i>Special</i> page has not yet been created, and product categories
-            other than <i>Cake</i> currently have no data. However, all other
-            parts of the site are fully working and responsive!
-          </p>
+          <>
+            <p>
+              A sample site for a imaginary bakery, perfect for small local
+              businesses who want to promote their products without dipping into
+              e-commerce just yet.
+            </p>
+            <p>
+              <b>Technologies:</b> React, Next.js (using the app directory),
+              Typescript, SASS, Zod
+              <br />
+              <b>Integrations:</b> Email (SendGrid: Mailing list subscription,
+              contact form)
+            </p>
+          </>
         }
       />
 
