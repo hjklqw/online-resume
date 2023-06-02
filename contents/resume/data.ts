@@ -103,7 +103,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       [
         'Other frameworks and languages (Angular, Python, C++, Java)',
         'Other databases and data management tools (Redis, ElasticSearch, Kibana)',
-        'Hosting and other DevOps (Docker, Azure Cloud, Github CI/CD, CircleCI)',
+        'Hosting and other DevOps (Docker, Azure Cloud, Github CI/CD, CircleCI, Launch Darkly)',
         'Gaming and creative software (Unreal Engine, 3ds Max, Blender, ZBrush, Sketchup, Photoshop, Clip Studio Paint, Daz Studio, FL Studio)',
       ],
       'Extensive full-stack, responsive, cross-browser and cross-platform development practise',
@@ -149,10 +149,10 @@ export const experience: JobModel[] = [
     },
     stack: 'React, Next.js, Typescript, MUI, Cypress, Jest',
     teamSize: '3 (FE only, Design and BE split with occasional sync-ups)',
-    dates: 'January 2023 - Present',
+    dates: 'January 2023 - March 2023',
     methodology: 'Agile',
     description: {
-      'Project modernization and fundamental setup': [
+      'Project leadership and architectural setup': [
         'Worked as part of a small team to rebuild a complex form project from scratch',
         'Established the fundamental structure of the application, setting up the directory layout, file organization standards and specific coding conventions, base package dependencies, and creating a dynamic form generation and management system PoC to work off of',
         'Introduced teammates to the usage of specific testing technologies and UI libraries with the PoC',
