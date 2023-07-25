@@ -101,8 +101,8 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       ],
       'Experience with:',
       [
-        'Other frameworks and languages (Angular, Python, C++, Java)',
-        'Other databases and data management tools (Redis, ElasticSearch, Kibana)',
+        'Other frameworks and languages (Angular, Python, C++, Java, Ruby on Rails)',
+        'Other databases, ORMs, and data management tools (Redis, ElasticSearch, Kibana, Supabase, Prisma)',
         'Hosting and other DevOps (Docker, Azure Cloud, Github CI/CD, CircleCI, Launch Darkly)',
         'Gaming and creative software (Unreal Engine, 3ds Max, Blender, ZBrush, Sketchup, Photoshop, Clip Studio Paint, Daz Studio, FL Studio)',
       ],
