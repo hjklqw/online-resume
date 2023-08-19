@@ -101,7 +101,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       ],
       'Experience with:',
       [
-        'Other frameworks and languages (Angular, Python, C++, Java, Ruby on Rails)',
+        'Other frameworks and languages (Ruby on Rails, Angular, Python, C++, Java)',
         'Other databases, ORMs, and data management tools (Redis, ElasticSearch, Kibana, Supabase, Prisma)',
         'Hosting and other DevOps (Docker, Azure Cloud, Github CI/CD, CircleCI, Launch Darkly)',
         'Gaming and creative software (Unreal Engine, 3ds Max, Blender, ZBrush, Sketchup, Photoshop, Clip Studio Paint, Daz Studio, FL Studio)',
@@ -140,7 +140,7 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
 
 export const experience: JobModel[] = [
   {
-    title: 'Software Engineer',
+    title: 'Senior Front-End Software Engineer',
     company: {
       name: 'TheoremOne',
       location: 'Remote',
@@ -190,7 +190,7 @@ export const experience: JobModel[] = [
     },
   },
   {
-    title: 'Web and Software Developer',
+    title: 'Full-Stack Web and Software Developer',
     company: {
       name: 'Noka Software and Creative Inc.',
       location: 'Remote',
@@ -216,7 +216,7 @@ export const experience: JobModel[] = [
     },
   },
   {
-    title: 'Full Stack Software Engineer',
+    title: 'Full-Stack Software Engineer',
     company: {
       name: 'Thomson Reuters',
       location: 'Toronto ON',
@@ -242,7 +242,7 @@ export const experience: JobModel[] = [
     },
   },
   {
-    title: 'Full Stack Web Developer',
+    title: 'Full-Stack Web Developer',
     company: {
       name: 'OpenText',
       location: 'Ottawa ON',
@@ -269,7 +269,7 @@ export const experience: JobModel[] = [
 
 export const miscExperience: ExperienceModel[] = [
   {
-    title: 'Co-Op Full Stack Web Developer',
+    title: 'Co-Op Full-Stack Web Developer',
     location: 'Bank Of Canada, Ottawa, ON',
     dates: 'April 2014 – August 2014',
     points: [
@@ -279,7 +279,7 @@ export const miscExperience: ExperienceModel[] = [
     ],
   },
   {
-    title: 'Co-Op Full Stack Web Developer',
+    title: 'Co-Op Full-Stack Web Developer',
     location: 'BOLDstreet Wireless, Ottawa, ON',
     dates: 'September 2013 – January 2014',
     points: [
