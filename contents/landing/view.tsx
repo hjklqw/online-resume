@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 
 import styles from './styles.module.scss'
@@ -13,6 +14,8 @@ export const LandingPage = () => {
     Section.OVERVIEW
   )
 
+  const { t } = useTranslation()
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.bgCircle}>
@@ -25,13 +28,14 @@ export const LandingPage = () => {
             section={Section.OVERVIEW}
             activeNavSection={activeNavSection}
             setActiveNavSection={setActiveNavSection}
+            t={t}
           />
-          <h2>Web Dev</h2>
-          <h1>Michelle Poon</h1>
+          <h2>{t('header.title')}</h2>
+          <h1>{t('header.name')}</h1>
           <h3>
-            Full-stack software engineer and web developer,&nbsp;
+            {t('header.desc1')}
             <br />
-            specializing in the front end
+            {t('header.desc2')}
           </h3>
         </header>
 
@@ -42,8 +46,9 @@ export const LandingPage = () => {
             section={Section.HIGHLIGHTS}
             activeNavSection={activeNavSection}
             setActiveNavSection={setActiveNavSection}
+            t={t}
           />
-          {highlights.map((highlight, i) => (
+          {highlights(t).map((highlight, i) => (
             <div className={styles.highlight} key={i}>
               <highlight.icon />
               <span className={styles.hook}>{highlight.hook}</span>
@@ -53,8 +58,8 @@ export const LandingPage = () => {
                   : highlight.description}
               </span>
               {highlight.link && (
-                <Link href={highlight.link.route} title={highlight.link.alt}>
-                  <a>{highlight.link.text} &rarr;</a>
+                <Link href={highlight.link.route}>
+                  <a title={highlight.link.alt}>{highlight.link.text} &rarr;</a>
                 </Link>
               )}
             </div>
@@ -66,6 +71,7 @@ export const LandingPage = () => {
             section={Section.LINKS}
             activeNavSection={activeNavSection}
             setActiveNavSection={setActiveNavSection}
+            t={t}
           />
           {contactInfo.map((link, i) => (
             <a

@@ -62,13 +62,11 @@
   nav {
     color: white;
 
-    a {
+    a,
+    .languageSwitcher {
       display: inline-flex;
       align-items: center;
-
-      &:not(:last-child) {
-        margin-right: 1.5rem;
-      }
+      margin-right: 1.5rem !important;
 
       svg {
         margin-right: 0.35rem;
@@ -89,14 +87,12 @@
       }
     }
 
+    .languageSwitcher {
+      @include linkButton;
+    }
+
     .themeButton {
-      background: none;
-      border: none;
-      padding: 0;
-      margin: 0;
-      font-size: inherit;
-      cursor: pointer;
-      transition: 0.15s linear;
+      @include linkButton;
 
       svg {
         @include glow;
@@ -116,7 +112,7 @@
     }
   }
 
-  @media all and (max-width: 752px) {
+  @media all and (max-width: 800px) {
     nav a {
       &:not(:last-child) {
         margin-right: 1rem;

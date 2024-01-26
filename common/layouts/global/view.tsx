@@ -22,7 +22,7 @@ export const GlobalLayout = ({ children }: Props) => {
       <Header theme={theme} setTheme={setTheme} />
       {children}
 
-      <footer className={styles.footer}>&copy; Michelle Poon, 2023</footer>
+      <footer className={styles.footer}>&copy; Michelle Poon, 2024</footer>
       <BackToTopButton />
       <Effect />
     </div>

@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "Web Dev",
+    "name": "Michelle Poon",
+    "desc1": "Full-stack software engineer and web developer,",
+    "desc2": "specializing in the front end"
+  },
+  "nav": {
+    "overview": "Overview",
+    "highlights": "Highlights",
+    "links": "Links"
+  },
+  "highlights": {
+    "code": {
+      "hook": "Clean code",
+      "description": [
+        "Reads like natural language; self-documenting, clear intentions.",
+        "Visit the links below to view samples!"
+      ]
+    },
+    "speed": {
+      "hook": "Speed",
+      "description": "This entire site was built within two days—from conception, design, to implementation and deployment!",
+      "link": {
+        "text": "View my skills and experience",
+        "alt": "Resume"
+      }
+    },
+    "stack": {
+      "hook": "Modern full stack",
+      "description": "React.js, Next.js, Redux, Recoil, ES6+, HTML5, CSS3, Node.js Express, and C# .Net to name a few",
+      "link": {
+        "text": "View my work samples",
+        "alt": "Portfolio"
+      }
+    }
+  }
+}

@@ -1,11 +1,14 @@
 import { IconType } from 'react-icons'
+import { TFunction } from 'next-i18next'
 
 import { BsFileEarmarkCodeFill } from 'react-icons/bs'
 import { MdSpeed } from 'react-icons/md'
 import { GiModernCity } from 'react-icons/gi'
 import { Routes } from '/assets/routes'
 
-export const highlights: {
+export const highlights = (
+  t: TFunction
+): {
   hook: string
   description: string | string[]
   icon: IconType
@@ -14,35 +17,32 @@ export const highlights: {
     route: string
     alt: string
   }
-}[] = [
+}[] => [
   {
-    hook: 'Clean code',
-    description: [
-      'Reads like natural language; self-documenting, clear intentions.',
-      'Visit the links below to view samples!',
-    ],
+    hook: t('highlights.code.hook'),
+    description: t('highlights.code.description', {
+      returnObjects: true,
+    }) as string[],
     icon: BsFileEarmarkCodeFill,
   },
   {
-    hook: 'Speed',
-    description:
-      'This entire site was built within two days—from conception, design, to implementation and deployment!',
+    hook: t('highlights.speed.hook'),
+    description: t('highlights.speed.description'),
     icon: MdSpeed,
     link: {
-      text: 'View my skills and experience',
+      text: t('highlights.speed.link.text'),
       route: Routes.RESUME,
-      alt: 'Resume',
+      alt: t('highlights.speed.link.alt'),
     },
   },
   {
-    hook: 'Modern full stack',
-    description:
-      'React.js, Next.js, Redux, Recoil, ES6+, HTML5, CSS3, Node.js Express, and C# .Net to name a few',
+    hook: t('highlights.stack.hook'),
+    description: t('highlights.stack.description'),
     icon: GiModernCity,
     link: {
-      text: 'View my work samples',
+      text: t('highlights.stack.link.text'),
       route: Routes.PORTFOLIO,
-      alt: 'Portfolio',
+      alt: t('highlights.stack.link.alt'),
     },
   },
 ]

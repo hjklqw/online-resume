@@ -20,3 +20,19 @@ $shakeScaleDown: 0.95;
     transform: rotate(-#{$shakeDegrees}deg) scale(#{$shakeScaleUp});
   }
 }
+
+@mixin linkTransition() {
+  transition: 0.15s linear;
+}
+
+@mixin linkButton() {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  @include linkTransition;
+}

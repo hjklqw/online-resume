@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "ウェブ 開発者",
+    "name": "ミッシエルプーン",
+    "desc1": "フロントエンド開発を専門としている",
+    "desc2": "フルスタックエンジニア"
+  },
+  "nav": {
+    "overview": "概要",
+    "highlights": "ハイライト",
+    "links": "リンク"
+  },
+  "highlights": {
+    "code": {
+      "hook": "綺麗なコード",
+      "description": [
+        "言葉のように簡単に読める、明確な意図の自己文書化コード。",
+        "サンプルを表示するには、以下のリンクにアクセスしてください。"
+      ]
+    },
+    "speed": {
+      "hook": "速度",
+      "description": "このサイト全体は、構想、設計、実装、配備まで 2 日以内に構築されました。",
+      "link": {
+        "text": "スキルと経験を見る",
+        "alt": "CV"
+      }
+    },
+    "stack": {
+      "hook": "モダンなテクノロジー",
+      "description": "いくつか挙げるとReact.j・Next.js・Redux・Recoil・ES6+・HTML5・CSS3・Node.js Express・C# .Netにに精通しています。",
+      "link": {
+        "text": "作品サンプルを見る",
+        "alt": "ポートフォリオ"
+      }
+    }
+  }
+}

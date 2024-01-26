@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { Router } from 'next/router'
 import Script from 'next/script'
 import { RecoilRoot } from 'recoil'
+import { appWithTranslation } from 'next-i18next'
 
 import 'common/styles/global.scss'
 
@@ -58,4 +59,4 @@ const App = ({ Component, pageProps }: Props) => {
   )
 }
 
-export default App
+export default appWithTranslation(App)

@@ -14,6 +14,7 @@ import styles from './styles.module.scss'
 import { Routes } from '/assets/routes'
 import { Theme } from '/assets/theme'
 import { getScrollRoot } from 'utils/document'
+import { LanguageSwitcher } from './languageSwitcher'
 
 type Props = {
   theme: string | undefined
@@ -99,6 +100,7 @@ export const Header = ({ theme, setTheme }: Props) => {
             </a>
           </Link>
         ))}
+        <LanguageSwitcher />
         <button
           className={styles.themeButton}
           onClick={() => setTheme(isDefaultTheme ? Theme.DARK : Theme.DEFAULT)}
