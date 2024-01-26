@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react'
 
 import styles from './styles.module.scss'
+import { getScrollRoot } from '/utils/document'
 
 /** In miliseconds */
 const RIPPLE_EFFECT_ANIM_LENGTH = 500
@@ -17,7 +18,7 @@ export function useRippleEffect() {
       if (isShowingRippleEffect) return
       rippleEffectCoords.current = {
         x: e.clientX,
-        y: e.clientY,
+        y: e.clientY + (getScrollRoot()?.scrollTop || 0),
       }
       setShowingRippleEffect(true)
       setTimeout(() => setShowingRippleEffect(false), RIPPLE_EFFECT_ANIM_LENGTH)

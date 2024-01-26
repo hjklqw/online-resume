@@ -15,6 +15,7 @@ import { Routes } from '/assets/routes'
 import { Theme } from '/assets/theme'
 import { getScrollRoot } from 'utils/document'
 import { LanguageSwitcher } from './languageSwitcher'
+import { MobileMenuButton } from './mobileMenuButton'
 
 type Props = {
   theme: string | undefined
@@ -49,9 +50,12 @@ const navItems: {
   },
 }
 
+const MOBILE_NAV_BREAKPOINT = 845
+
 export const Header = ({ theme, setTheme }: Props) => {
   const [isSticky, setSticky] = useState<boolean>(false)
   const [isFading, setFading] = useState<boolean>(false)
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
 
   const isDefaultTheme = theme === Theme.DEFAULT
 
@@ -71,10 +75,20 @@ export const Header = ({ theme, setTheme }: Props) => {
     [isSticky]
   )
 
+  const onResize = useCallback(() => {
+    if (window.innerWidth > MOBILE_NAV_BREAKPOINT) {
+      setMobileMenuOpen(false)
+    }
+  }, [])
+
   useEffect(() => {
     getScrollRoot()?.addEventListener('scroll', onScroll)
-    return () => getScrollRoot()?.removeEventListener('scroll', onScroll)
-  }, [onScroll])
+    window.addEventListener('resize', onResize)
+    return () => {
+      getScrollRoot()?.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [onScroll, onResize])
 
   const className = [
     styles.nav,
@@ -91,7 +105,13 @@ export const Header = ({ theme, setTheme }: Props) => {
           The <span>O</span>nline Resume
         </a>
       </Link>
-      <nav>
+
+      <MobileMenuButton
+        onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        isMenuOpen={isMobileMenuOpen}
+      />
+
+      <nav className={isMobileMenuOpen ? styles.open : undefined}>
         {Object.entries(navItems).map(([route, data]) => (
           <Link href={route} title={data.alt} key={route}>
             <a>
@@ -107,6 +127,7 @@ export const Header = ({ theme, setTheme }: Props) => {
           title={isDefaultTheme ? 'Turn off' : 'Turn on'}
         >
           {isDefaultTheme ? <RiLightbulbFlashLine /> : <RiLightbulbLine />}
+          <span>Theme</span>
         </button>
       </nav>
     </section>

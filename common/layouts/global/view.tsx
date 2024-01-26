@@ -15,12 +15,9 @@ export const GlobalLayout = ({ children }: Props) => {
   const { addRippleEffect, Effect } = useRippleEffect()
 
   return (
-    <div
-      className={`${styles.wrapper} theme-${theme}`}
-      onClick={addRippleEffect}
-    >
+    <div className={`${styles.wrapper} theme-${theme}`}>
       <Header theme={theme} setTheme={setTheme} />
-      {children}
+      <div onClick={addRippleEffect}>{children}</div>
 
       <footer className={styles.footer}>&copy; Michelle Poon, 2024</footer>
       <BackToTopButton />

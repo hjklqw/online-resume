@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 
   color: var(--text);
   background: linear-gradient(
@@ -19,6 +20,8 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
   transition: top 0.5s;
   top: -60px;
@@ -98,6 +101,10 @@
         @include glow;
       }
 
+      span {
+        display: none;
+      }
+
       &:hover {
         padding: 0 0.5rem;
 
@@ -111,29 +118,6 @@
       }
     }
   }
-
-  @media all and (max-width: 800px) {
-    nav a {
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-
-      svg {
-        margin-right: 0;
-      }
-      span {
-        display: none;
-      }
-    }
-  }
-
-  @media all and (max-width: 380px) {
-    .siteName {
-      max-width: 0.7em;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-  }
 }
 
 .footer {
@@ -142,4 +126,107 @@
   font-size: 0.8rem;
   text-align: center;
   padding: 0.2rem;
+}
+
+.mobileMenuButton {
+  @include linkButton;
+  display: none;
+  flex-direction: column;
+  width: 1.12rem;
+  gap: 3.5px;
+  position: relative;
+  flex-shrink: 0;
+
+  span {
+    background: white;
+    width: 100%;
+    height: 2px;
+    transition: all 0.35s ease-out;
+  }
+}
+
+@media all and (max-width: 845px) {
+  .mobileMenuButton {
+    display: inline-flex;
+
+    &.open span {
+      height: 1.5px;
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(0, 7px);
+      }
+      &:nth-child(2) {
+        width: 0%;
+        transform: translate(4px, 0);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -7px);
+      }
+    }
+  }
+
+  .nav nav {
+    left: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 56px;
+    background: var(--cardBackground);
+    color: var(--cardText);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.37s ease-in-out, opacity 0.25s linear;
+
+    &.open {
+      max-height: 300px;
+      padding-bottom: 0.35rem;
+      opacity: 1;
+    }
+
+    $itemPadding: 0.8rem 1rem;
+
+    a,
+    .languageSwitcher,
+    .themeButton {
+      margin-right: 0 !important;
+      padding: $itemPadding;
+
+      svg {
+        color: currentColor;
+        flex-shrink: 0;
+      }
+    }
+
+    .themeButton {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      span {
+        display: block;
+      }
+
+      svg {
+        vertical-align: text-top;
+        margin-right: 0.35rem;
+      }
+
+      &:hover {
+        padding: $itemPadding;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        color: var(--navHover);
+      }
+    }
+
+    @media all and (max-width: 243.5px) {
+      top: 80px;
+    }
+
+    @media all and (max-width: 176px) {
+      top: 104px;
+    }
+  }
 }
