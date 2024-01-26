@@ -1,12 +1,14 @@
+import { TFunction } from 'next-i18next'
 import styles from './styles.module.scss'
 
 import { ExperienceInfoOrientation, JobModel } from './models'
 
 type Props = {
   model: JobModel
+  t: TFunction
 }
 
-export const JobInfo = ({ model }: Props) => (
+export const JobInfo = ({ model, t }: Props) => (
   <div
     className={`${styles.jobInfo} ${styles.experienceInfo} ${
       styles[ExperienceInfoOrientation.HORIZONTAL]
@@ -19,23 +21,23 @@ export const JobInfo = ({ model }: Props) => (
       </span>
       <span>{model.dates}</span>
       <span>
-        <span>Company Size</span>
+        <span>{t('jobInfoLabels.companySize')}</span>
         <span>{model.company.size}</span>
       </span>
       <span>
-        <span>Industry</span>
+        <span>{t('jobInfoLabels.industry')}</span>
         <span>{model.company.industry}</span>
       </span>
       <span>
-        <span>Stack</span>
+        <span>{t('jobInfoLabels.stack')}</span>
         <span>{model.stack}</span>
       </span>
       <span>
-        <span>Methodology</span>
+        <span>{t('jobInfoLabels.methodology')}</span>
         <span>{model.methodology}</span>
       </span>
       <span>
-        <span>Team Size</span>
+        <span>{t('jobInfoLabels.teamSize')}</span>
         <span>{model.teamSize}</span>
       </span>
     </section>

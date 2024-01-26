@@ -32,12 +32,12 @@ export enum ContactInfoType {
 }
 
 export enum DataSection {
-  OVERVIEW,
-  CONTACT,
-  EDUCATION,
-  SKILLS,
-  EXPERIENCE,
-  MISC_EXPERIENCE,
-  AWARDS,
-  LANGUAGES,
+  OVERVIEW = 'overview',
+  CONTACT = 'contact',
+  EDUCATION = 'education',
+  SKILLS = 'skills',
+  EXPERIENCE = 'experience',
+  MISC_EXPERIENCE = 'misc-experience',
+  AWARDS = 'awards',
+  LANGUAGES = 'languages',
 }

@@ -22,7 +22,7 @@ export const LanguageSwitcher = () => {
     <button
       className={styles.languageSwitcher}
       onClick={switchLanguage}
-      title="JP currently available on landing page only!"
+      title="JP currently available on homepage and resume pages only!"
     >
       <LanguageIcon />
       {isEnglish ? 'EN' : '日本語'}

@@ -14,7 +14,7 @@ export const LandingPage = () => {
     Section.OVERVIEW
   )
 
-  const { t } = useTranslation()
+  const { t } = useTranslation('landing')
 
   return (
     <div className={styles.wrapper}>

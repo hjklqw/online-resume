@@ -1,60 +1,22 @@
+import { TFunction } from 'next-i18next'
+
 import { IconBaseProps, IconType } from 'react-icons'
 import { IoLocationSharp } from 'react-icons/io5'
 import { RiHonourLine } from 'react-icons/ri'
 import { TbAward } from 'react-icons/tb'
 import { MdOutlineSchool } from 'react-icons/md'
 
-import {
-  ContactInfoType,
-  ExperienceModel,
-  JobModel,
-  DataSection,
-} from './models'
+import { ContactInfoType, ExperienceModel } from './models'
 import { contactInfo as baseContactInfo } from 'assets/sharedData'
 
-export const sections: {
-  [section in DataSection]: { id: string; label: string }
-} = {
-  [DataSection.OVERVIEW]: {
-    id: 'overview',
-    label: 'Overview',
-  },
-  [DataSection.CONTACT]: {
-    id: 'contact',
-    label: 'Contact',
-  },
-  [DataSection.EDUCATION]: {
-    id: 'education',
-    label: 'Education',
-  },
-  [DataSection.SKILLS]: {
-    id: 'skills',
-    label: 'Skills',
-  },
-  [DataSection.EXPERIENCE]: {
-    id: 'experience',
-    label: 'Experience',
-  },
-  [DataSection.MISC_EXPERIENCE]: {
-    id: 'misc-experience',
-    label: 'Misc Experience',
-  },
-  [DataSection.AWARDS]: {
-    id: 'awards',
-    label: 'Scholarships and Awards',
-  },
-  [DataSection.LANGUAGES]: {
-    id: 'languages',
-    label: 'Languages',
-  },
-}
-
-export const contactInfo: {
+export const contactInfo = (
+  t: TFunction
+): {
   icon: IconType
   iconProps?: IconBaseProps
   text: string
   type: ContactInfoType
-}[] = [
+}[] => [
   ...baseContactInfo.map((info) => ({
     icon: info.icon,
     iconProps: info.iconProps,
@@ -64,24 +26,10 @@ export const contactInfo: {
   {
     icon: IoLocationSharp,
     iconProps: { size: '1.4em', style: { marginLeft: '-0.2em' } },
-    text: 'Canada',
+    text: t('contact.canada'),
     type: ContactInfoType.NONE,
   },
 ]
-
-export const education: ExperienceModel = {
-  title: 'BCS Honours Game Development Stream',
-  location: 'Carleton University, Ottawa ON',
-  dates: 'September 2011 – December 2015',
-  points: [
-    'Co-op option',
-    'Masters Accelerated stream',
-    'Minor in Japanese and German',
-  ],
-}
-
-export const overview =
-  'Full-stack developer with 8+ years of experience, specializing in front-end web development with modern JS (React, Typescript, ES6+).'
 
 export const skills: { category: string; points: (string | string[])[] }[] = [
   {
@@ -135,135 +83,6 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
       'Regularly worked remotely and with other remote, distributed, and cross-functional team members',
       'Self-motivated with a high degree of autonomy and comfortable with all team sizes',
     ],
-  },
-]
-
-export const experience: JobModel[] = [
-  {
-    title: 'Senior Front-End Software Engineer',
-    company: {
-      name: 'TheoremOne',
-      location: 'Remote',
-      industry: 'Consultancy',
-      size: 'Medium-Large (600 people)',
-    },
-    stack: 'React, Next.js, Typescript, MUI, Cypress, Jest',
-    teamSize: '3 (FE only, Design and BE split with occasional sync-ups)',
-    dates: 'January 2023 - March 2023',
-    methodology: 'Agile',
-    description: {
-      'Project leadership and architectural setup': [
-        'Worked as part of a small team to rebuild a complex form project from scratch',
-        'Established the fundamental structure of the application, setting up the directory layout, file organization standards and specific coding conventions, base package dependencies, and creating a dynamic form generation and management system PoC to work off of',
-        'Introduced teammates to the usage of specific testing technologies and UI libraries with the PoC',
-      ],
-      'Requirements gathering and presentation': [
-        'Investigated, documented, and presented a catered dynamic form generation and data management system that is simple to use, understand, and is extensible to fit new or special business requirements',
-        'Presented well-organized, attractive work in bi-weekly sprint demos that delighted clients and improved team morale',
-      ],
-    },
-  },
-  {
-    title: 'Senior Front-End Developer',
-    company: {
-      name: 'EInc.',
-      location: 'Remote',
-      industry: 'Automobile',
-      size: 'Medium (100 people)',
-    },
-    stack:
-      'React, Next.js, Typescript, Styled-Components, Apollo GraphQL, Cypress, Jest, Storybook',
-    teamSize: '7 (+2 for designers and manager)',
-    dates: 'November 2021 - November 2022',
-    methodology: 'Agile',
-    description: {
-      'Feature implementation within a large existing codebase': [
-        'Added new features, such as heavy data displays and animated dashboard components, to a large car dealership management app off Figma design files, ensuring pixel-perfect implementation',
-      ],
-      'Test writing': [
-        'Established the basis for complex integration testing via creation of custom cypress commands',
-      ],
-      'Bug fixing and reporting': [
-        'Addressed issues found on Sentry, manual or automated testing, or Slack threads in a timely manner',
-        'Created tickets with clear descriptions, reproduction steps, and sometimes possible solutions, adding the proper categories and labels to ensure intelligibility and organization',
-      ],
-    },
-  },
-  {
-    title: 'Full-Stack Web and Software Developer',
-    company: {
-      name: 'Noka Software and Creative Inc.',
-      location: 'Remote',
-      industry: 'Consultancy',
-      size: 'Super small (7 people)',
-    },
-    stack:
-      'React, Next.js, Typescript, SASS, Node.js Express, MongoDB, Cypress, Jest',
-    teamSize: '~5 for first project, then alone!',
-    methodology: 'RAD/Waterfall',
-    dates: 'May 2020 – November 2021',
-    description: {
-      'Start-to-finish full-stack development and delivery': [
-        'Independently built a fully responsive, internationalized site with a complex form system, PDF generation, and email (SendGrid) integration',
-        'Delivered the finished and polished product to the client in under four weeks',
-      ],
-      'Project architecting, design, and implementation': [
-        'Gathered business requirements and determined the stack of the project, proposing architecture that would minimize costs, and implementing the code to a rapid development cycle',
-      ],
-      'Open-source development': [
-        "Published two open-source React libraries under the company's discretion, then used them to successfully speed up development for subsequent projects",
-      ],
-    },
-  },
-  {
-    title: 'Full-Stack Software Engineer',
-    company: {
-      name: 'Thomson Reuters',
-      location: 'Toronto ON',
-      industry: 'News, Legal, Media, Technology',
-      size: 'Large (10000+ employees)',
-    },
-    stack: 'Angular, Typescript, C# .Net, CosmosDB, Azure, Swagger',
-    teamSize: '~10',
-    methodology: 'Agile Scrum',
-    dates: 'September 2018 – February 2020',
-    description: {
-      'Greenfield project construction': [
-        'Designed and implemented full-stack solutions for an Angular greenfield project, delivering complete features with automated test coverage within one-week sprints',
-      ],
-      'Business requirement design and implementation': [
-        'Determined the best user experience to address business requirements, implementing them full-stack and completing solutions that thrilled consumers',
-        'Became the main UI/UX developer shortly after joining the team',
-      ],
-      'Microservice creation': [
-        'Contributed to the fundamental structure of the application, implementing a scalable microservice architecture on Azure',
-        'Created REST API endpoints in a C# .Net server, connecting and optimizing requests and responses',
-      ],
-    },
-  },
-  {
-    title: 'Full-Stack Web Developer',
-    company: {
-      name: 'OpenText',
-      location: 'Ottawa ON',
-      industry: 'Software Development',
-      size: 'Large (10000+ employees)',
-    },
-    stack: 'jQuery, OScript (company-specific language), Java',
-    teamSize: '2-3 (Worked 98% indepedently)',
-    methodology: 'DevOps',
-    dates: 'February 2016 – August 2018',
-    description: {
-      'New feature design and implementation': [
-        'Built the front page of the customer support site using custom jQuery widgets and REST API calls',
-      ],
-      'Old feature redesign, improvement, and overhaul': [
-        'Created a WYSIWYG editor integrated with a large scale CMS to dynamically generate product pages from database records, minimizing manual work for product managers and removing it for developers',
-      ],
-      'Internal tool development': [
-        'Developed internal-use XML conversion software in Java',
-      ],
-    },
   },
 ]
 

@@ -1,0 +1,172 @@
+{
+  "overview": {
+    "label": "概要",
+    "contents": "8年以上の経験を持つフルスタックエンジニアです。React と Typescript によるフロントエンド開発を専門としています。"
+  },
+  "seeSpecifics": "詳細を参照",
+  "contact": {
+    "label": "連絡先",
+    "canada": "カナダ"
+  },
+  "education": {
+    "label": "学歴",
+    "contents": {
+      "title": "CS学士・優等学位・ゲーム開発専修",
+      "location": "カールトン大学、オンタリオ州、オタワ",
+      "dates": "２０１１年９月 – ２０１５年１２月",
+      "points": [
+        "工場実習あり",
+        "加速され修士オプション",
+        "日本語とドイツ語の副専攻"
+      ]
+    }
+  },
+  "skills": {
+    "label": "スキル"
+  },
+  "experience": {
+    "label": "職歴",
+    "contents": [
+      {
+        "title": "シニアフロントエンドエンジニア",
+        "company": {
+          "name": "TheoremOne",
+          "location": "リモート",
+          "industry": "コンサルティング",
+          "size": "中～大企業（約６００人）"
+        },
+        "stack": "React, Next.js, Typescript, MUI, Cypress, Jest",
+        "teamSize": "３人",
+        "dates": "２０２３年１月 - ２０２３年３月",
+        "methodology": "Agile",
+        "description": {
+          "Project leadership and architectural setup": [
+            "Worked as part of a small team to rebuild a complex form project from scratch",
+            "Established the fundamental structure of the application, setting up the directory layout, file organization standards and specific coding conventions, base package dependencies, and creating a dynamic form generation and management system PoC to work off of",
+            "Introduced teammates to the usage of specific testing technologies and UI libraries with the PoC"
+          ],
+          "Requirements gathering and presentation": [
+            "Investigated, documented, and presented a catered dynamic form generation and data management system that is simple to use, understand, and is extensible to fit new or special business requirements",
+            "Presented well-organized, attractive work in bi-weekly sprint demos that delighted clients and improved team morale"
+          ]
+        }
+      },
+      {
+        "title": "シニアフロントエンドエンジニア",
+        "company": {
+          "name": "EInc.",
+          "location": "リモート",
+          "industry": "自動車",
+          "size": "中堅企業（約百人）"
+        },
+        "stack": "React, Next.js, Typescript, Styled-Components, Apollo GraphQL, Cypress, Jest, Storybook",
+        "teamSize": "７人（＋２デザイナーとマネージャー）",
+        "dates": "２０２１年９月 - ２０２２年９月",
+        "methodology": "Agile",
+        "description": {
+          "Feature implementation within a large existing codebase": [
+            "Added new features, such as heavy data displays and animated dashboard components, to a large car dealership management app off Figma design files, ensuring pixel-perfect implementation"
+          ],
+          "Test writing": [
+            "Established the basis for complex integration testing via creation of custom cypress commands"
+          ],
+          "Bug fixing and reporting": [
+            "Addressed issues found on Sentry, manual or automated testing, or Slack threads in a timely manner",
+            "Created tickets with clear descriptions, reproduction steps, and sometimes possible solutions, adding the proper categories and labels to ensure intelligibility and organization"
+          ]
+        }
+      },
+      {
+        "title": "フルスタックエンジニア",
+        "company": {
+          "name": "Noka Software and Creative Inc.",
+          "location": "リモート",
+          "industry": "コンサルティング",
+          "size": "新興企業（７人）"
+        },
+        "stack": "React, Next.js, Typescript, SASS, Node.js Express, MongoDB, Cypress, Jest",
+        "teamSize": "最初のプロジェクト：５人　その後は独立作業",
+        "methodology": "RAD/Waterfall",
+        "dates": "M２０２０年５月 - ２０２１年９月",
+        "description": {
+          "Start-to-finish full-stack development and delivery": [
+            "Independently built a fully responsive, internationalized site with a complex form system, PDF generation, and email (SendGrid) integration",
+            "Delivered the finished and polished product to the client in under four weeks"
+          ],
+          "Project architecting, design, and implementation": [
+            "Gathered business requirements and determined the stack of the project, proposing architecture that would minimize costs, and implementing the code to a rapid development cycle"
+          ],
+          "Open-source development": [
+            "Published two open-source React libraries under the company's discretion, then used them to successfully speed up development for subsequent projects"
+          ]
+        }
+      },
+      {
+        "title": "フルスタックエンジニア",
+        "company": {
+          "name": "Thomson Reuters",
+          "location": "オンタリオ州、トロント",
+          "industry": "ニュース、法律、メディア、テクノロジー",
+          "size": "大企業（一万人以上の従業員）"
+        },
+        "stack": "Angular, Typescript, C# .Net, CosmosDB, Azure, Swagger",
+        "teamSize": "役１０人",
+        "methodology": "Agile Scrum",
+        "dates": "２０１８年９月 - ２０２０年２月",
+        "description": {
+          "Greenfield project construction": [
+            "Designed and implemented full-stack solutions for an Angular greenfield project, delivering complete features with automated test coverage within one-week sprints"
+          ],
+          "Business requirement design and implementation": [
+            "Determined the best user experience to address business requirements, implementing them full-stack and completing solutions that thrilled consumers",
+            "Became the main UI/UX developer shortly after joining the team"
+          ],
+          "Microservice creation": [
+            "Contributed to the fundamental structure of the application, implementing a scalable microservice architecture on Azure",
+            "Created REST API endpoints in a C# .Net server, connecting and optimizing requests and responses"
+          ]
+        }
+      },
+      {
+        "title": "フルスタックエンジニア",
+        "company": {
+          "name": "OpenText",
+          "location": "オンタリオ州、オタワ",
+          "industry": "ソフト開発",
+          "size": "大企業（一万人以上）"
+        },
+        "stack": "jQuery, OScript（会社独自のプログラミング言語）, Java",
+        "teamSize": "２～３人（９８％独立作業）",
+        "methodology": "DevOps",
+        "dates": "２０１６年２月 - ２０１８年８月",
+        "description": {
+          "New feature design and implementation": [
+            "Built the front page of the customer support site using custom jQuery widgets and REST API calls"
+          ],
+          "Old feature redesign, improvement, and overhaul": [
+            "Created a WYSIWYG editor integrated with a large scale CMS to dynamically generate product pages from database records, minimizing manual work for product managers and removing it for developers"
+          ],
+          "Internal tool development": [
+            "Developed internal-use XML conversion software in Java"
+          ]
+        }
+      }
+    ]
+  },
+  "misc-experience": {
+    "label": "他の経験"
+  },
+  "awards": {
+    "label": "奨学金と賞"
+  },
+  "languages": {
+    "label": "言語"
+  },
+  "jobInfoLabels": {
+    "companySize": "会社規模",
+    "industry": "業界",
+    "stack": "スタック",
+    "methodology": "メソッド",
+    "teamSize": "チーム規模"
+  }
+}

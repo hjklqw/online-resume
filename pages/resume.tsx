@@ -1,4 +1,5 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { PageModel } from '/common/models/page'
 import { ResumePage } from '/contents/resume'
@@ -16,5 +17,21 @@ page.meta = {
   email: 'mp.hjkqw@gmail.com',
 }
 page.maxWidth = 1750
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+  defaultLocale,
+}) => {
+  const translationsProps = await serverSideTranslations(
+    locale ?? defaultLocale!,
+    'resume'
+  )
+
+  return {
+    props: {
+      ...translationsProps,
+    },
+  }
+}
 
 export default Resume
