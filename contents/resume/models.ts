@@ -1,12 +1,17 @@
-export interface ExperienceModel {
+export interface BaseExperienceModel {
   title: string
-  location: string
+  company: {
+    name: string
+    location: string
+  }
   dates: string
+}
+
+export interface ExperienceModel extends BaseExperienceModel {
   points: string[]
 }
 
-export interface JobModel {
-  title: string
+export interface JobModel extends BaseExperienceModel {
   company: {
     name: string
     industry: string
@@ -16,7 +21,6 @@ export interface JobModel {
   stack: string
   teamSize: string
   methodology: string
-  dates: string
   description: { [task: string]: string[] }
 }
 

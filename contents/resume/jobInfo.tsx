@@ -1,7 +1,9 @@
 import { TFunction } from 'next-i18next'
+
 import styles from './styles.module.scss'
 
 import { ExperienceInfoOrientation, JobModel } from './models'
+import { ExperienceInfoSharedData } from './experienceInfoSharedData'
 
 type Props = {
   model: JobModel
@@ -15,11 +17,8 @@ export const JobInfo = ({ model, t }: Props) => (
     }`}
   >
     <section className={styles.experienceData}>
-      <span>{model.title}</span>
-      <span>
-        {model.company.name}, {model.company.location}
-      </span>
-      <span>{model.dates}</span>
+      <ExperienceInfoSharedData model={model} />
+      <span />
       <span>
         <span>{t('jobInfoLabels.companySize')}</span>
         <span>{model.company.size}</span>

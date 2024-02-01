@@ -89,7 +89,10 @@ export const skills: { category: string; points: (string | string[])[] }[] = [
 export const miscExperience: ExperienceModel[] = [
   {
     title: 'Co-Op Full-Stack Web Developer',
-    location: 'Bank Of Canada, Ottawa, ON',
+    company: {
+      name: 'Bank Of Canada',
+      location: 'Ottawa, ON',
+    },
     dates: 'April 2014 – August 2014',
     points: [
       'Worked in a cross-functional Agile Scrum team to improve, bug fix, and add to the bank’s main and Museum PHP sites',
@@ -99,7 +102,10 @@ export const miscExperience: ExperienceModel[] = [
   },
   {
     title: 'Co-Op Full-Stack Web Developer',
-    location: 'BOLDstreet Wireless, Ottawa, ON',
+    company: {
+      name: 'BOLDstreet Wireless',
+      location: 'Ottawa, ON',
+    },
     dates: 'September 2013 – January 2014',
     points: [
       'Built a credit card and registration system on top of a base website with a partner to facilitate users in purchasing internet time with a user-friendly interface, learning how to work with the code of an established system and how to design and incorporate databases into relevant projects, practicing both front and back-end development',
@@ -108,7 +114,10 @@ export const miscExperience: ExperienceModel[] = [
   },
   {
     title: 'User Application Support/Junior Programmer Analyst',
-    location: 'Department of Justice Canada, Ottawa ON',
+    company: {
+      name: 'Department of Justice Canada',
+      location: 'Ottawa, ON',
+    },
     dates: 'July 2013 – September 2013',
     points: [
       'Tested for and reported bugs, practising iterative error checking and gaining familiarity with common coding mistakes',
@@ -117,7 +126,10 @@ export const miscExperience: ExperienceModel[] = [
   },
   {
     title: 'Teaching Assistant',
-    location: 'Carleton University, Ottawa ON',
+    company: {
+      name: 'Carleton University',
+      location: 'Ottawa, ON',
+    },
     dates: 'January 2013 – May 2013',
     points: [
       'Marked the assignments of first year game development students, giving detailed feedback concerning design and code concepts, both providing thorough support and gaining experience in doing so, along with learning from the diversity of their work',

@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 
 import { ExperienceInfoOrientation, ExperienceModel } from './models'
+import { ExperienceInfoSharedData } from './experienceInfoSharedData'
 
 type Props = {
   model: ExperienceModel
@@ -15,9 +16,7 @@ export const ExperienceInfo = ({ model, orientation }: Props) => (
     }`}
   >
     <section className={styles.experienceData}>
-      <span>{model.title}</span>
-      <span>{model.location}</span>
-      <span>{model.dates}</span>
+      <ExperienceInfoSharedData model={model} />
     </section>
     <section className={styles.experiencePoints}>
       <ul>

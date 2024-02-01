@@ -12,7 +12,10 @@
     "label": "Education",
     "contents": {
       "title": "BCS Honours Game Development Stream",
-      "location": "Carleton University, Ottawa ON",
+      "company": {
+        "name": "Carleton University",
+        "location": "Ottawa, ON"
+      },
       "dates": "September 2011 – December 2015",
       "points": [
         "Co-op option",

@@ -127,20 +127,35 @@ section.contactInfo {
 
 .experienceInfo {
   .experienceData {
-    & > span {
+    & > span,
+    & > div {
       display: block;
       line-height: 1.3em;
 
-      &:first-child {
+      &.title {
         font-size: 1rem;
         opacity: 1;
         font-weight: 500;
         margin-bottom: 0.25rem;
       }
 
-      &:not(:first-child) {
+      &:not(.title) {
         @include secondaryInfo;
       }
+
+      &.companyAndLocation {
+        flex-direction: row;
+
+        div.withIcon {
+          display: inline-flex;
+        }
+      }
+    }
+
+    div.withIcon {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
     }
   }
 

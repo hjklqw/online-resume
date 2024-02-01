@@ -12,7 +12,10 @@
     "label": "学歴",
     "contents": {
       "title": "CS学士・優等学位・ゲーム開発専修",
-      "location": "カールトン大学、オンタリオ州、オタワ",
+      "company": {
+        "name": "カールトン大学",
+        "location": "オンタリオ州、オタワ"
+      },
       "dates": "２０１１年９月 – ２０１５年１２月",
       "points": [
         "工場実習あり",
@@ -87,7 +90,7 @@
         "stack": "React, Next.js, Typescript, SASS, Node.js Express, MongoDB, Cypress, Jest",
         "teamSize": "最初のプロジェクト：５人　その後は独立作業",
         "methodology": "RAD/Waterfall",
-        "dates": "M２０２０年５月 - ２０２１年９月",
+        "dates": "２０２０年５月 - ２０２１年９月",
         "description": {
           "Start-to-finish full-stack development and delivery": [
             "Independently built a fully responsive, internationalized site with a complex form system, PDF generation, and email (SendGrid) integration",
