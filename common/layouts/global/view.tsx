@@ -12,16 +12,18 @@ type Props = {
 
 export const GlobalLayout = ({ children }: Props) => {
   const [theme, setTheme] = useMountedRecoilState(themeAtom)
-  const { addRippleEffect, Effect } = useRippleEffect()
+  const { addRippleEffect, Effect: RippleEffect } = useRippleEffect()
 
   return (
     <div className={`${styles.wrapper} theme-${theme}`}>
       <Header theme={theme} setTheme={setTheme} />
-      <div onClick={addRippleEffect}>{children}</div>
+      <div onClick={addRippleEffect} style={{ flex: 1 }}>
+        {children}
+      </div>
 
       <footer className={styles.footer}>&copy; Michelle Poon, 2024</footer>
       <BackToTopButton />
-      <Effect />
+      <RippleEffect />
     </div>
   )
 }

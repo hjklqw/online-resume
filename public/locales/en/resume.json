@@ -31,6 +31,29 @@
     "label": "Experience",
     "contents": [
       {
+        "title": "Front-End Engineer",
+        "company": {
+          "name": "Leonardo.Ai",
+          "location": "Remote",
+          "industry": "AI",
+          "size": "Medium"
+        },
+        "stack": "React, Next.js, Typescript, GraphQL, Chakra UI, Jest, Storybook",
+        "teamSize": "7-12 people",
+        "dates": "June 2024 - Present",
+        "methodology": "Quasi-Agile",
+        "description": {
+          "Feature, performance, and code quality optimization": [
+            "Designed and built a new tooltip system so that it greatly simplified the existing workflow, is modular, decoupled from the UI library, easily scalable and testable, produced cleaner code, and could be gradually phased in without affecting existing tooltips",
+            "Presented this new system to fellow engineers, describing the thought process behind its architecture, encouraging discussion and different perspectives to promote continuous improvement"
+          ],
+          "High developmental and learning speed": [
+            "Quickly solved bugs and made small to impactful changes in complex architecture, finishing tickets at a rate that emptied the task list on a few occasions",
+            "Created my first PRs on the very first day, rapidly integrating myself into the codebase and the then-unfamiliar UI library"
+          ]
+        }
+      },
+      {
         "title": "Senior Front-End Software Engineer",
         "company": {
           "name": "TheoremOne",
