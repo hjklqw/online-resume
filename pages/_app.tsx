@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
 import { Router } from 'next/router'
-import Script from 'next/script'
 import { RecoilRoot } from 'recoil'
 import { appWithTranslation } from 'next-i18next'
 
@@ -11,7 +10,7 @@ import { Head } from '/common/head'
 import { PageModel } from '/common/models/page'
 import { PageLayout } from '/common/layouts/page'
 import { getScrollRoot } from '/utils/document'
-import { gaTag } from '/utils/gaTag'
+import { gaTag, GaTagInstallationScript } from '/utils/gaTag'
 
 type Props<P = any> = AppProps<P> & {
   Component: PageModel<P>
@@ -29,14 +28,7 @@ const App = ({ Component, pageProps }: Props) => {
 
   return (
     <RecoilRoot>
-      <Script async src={gaTag.tagUrl} />
-      <Script
-        id="gtag"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: gaTag.installationScript,
-        }}
-      />
+      <GaTagInstallationScript />
       <Head
         title={Component.title}
         description={Component.description}

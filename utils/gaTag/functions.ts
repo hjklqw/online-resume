@@ -6,13 +6,6 @@ const ID = (() => {
   return value
 })()
 
-const installationScript = `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${ID}', {
-  page_path: window.location.pathname,
-});`
-
 function pageView(url: string) {
   window.gtag('config', ID, {
     page_path: url,
@@ -31,8 +24,7 @@ function event(
 }
 
 export const gaTag = {
-  tagUrl: `https://www.googletagmanager.com/gtag/js?id=${ID}`,
-  installationScript,
+  id: ID,
   pageView,
   event,
-}
+} as const
