@@ -15,6 +15,7 @@ import {
   ContactInfoType,
   DataSection,
   ExperienceInfoOrientation,
+  ExperienceModel,
   JobModel,
 } from './models'
 import { Section } from './section'
@@ -88,7 +89,11 @@ export const ResumePage = () => {
 
         <Section section={DataSection.EDUCATION} t={t}>
           <ExperienceInfo
-            model={t('education.contents', { returnObjects: true })}
+            model={
+              t('education.contents', {
+                returnObjects: true,
+              }) as ExperienceModel
+            }
           />
         </Section>
       </div>
