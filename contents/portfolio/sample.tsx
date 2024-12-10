@@ -26,7 +26,7 @@ export const Sample = ({
         <ExternalLink href={link}>
           <Image
             src={`/samples/${imageSrc}`}
-            alt="Bakery sample"
+            alt={name}
             width={1618}
             height={1032}
             layout="responsive"
